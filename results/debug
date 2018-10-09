@@ -1,0 +1,200 @@
+monthlyPayments(L,Mp), loanStatus(L, Ls_M), Ls_M == c, loanAmount(L, La_M), maxMod
+ (Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_203), X_T_203 == i
+
+loanStatus(L, Ls_M), Ls_M == c, loanAmount(L, La_M), maxMod(Afr_M, (hasLoan(A_M,L,
+ true), freq(A_M, Afr_M)), X_T_203), X_T_203 == i
+
+
+
+===================================================================================
+				Complete Case
+===================================================================================
+
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-09-28 12:14:28,097 INFO     WRMSE = 0.147608, Number of tests consider = 81
+
+monthlyPayments(L) ~ gaussian(Mean,114856.102935) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_41),maxMod(X_T_41)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_74),maxMod(X_T_74)~=f,findall_forward(Aavsi_M,(hasLoan(A_M_1,L)~=true,avgSumOfInc(A_M_1)~=Aavsi_M),X_T_92_Temp),avg(X_T_92_Temp)~=X_T_92,getMean([X_T_92],[0.029265913731588964,577.91060773086019],Mean).
+monthlyPayments(L) ~ gaussian(Mean,3557982.7436) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_42),maxMod(X_T_42)~=m,loanAmount(L)~=La_M,getMean([La_M],[0.024198139377203453,2912.4638090009821],Mean).
+monthlyPayments(L) ~ gaussian(Mean,80679.9595902) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_202),maxMod(X_T_202)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_234),maxMod(X_T_234)~=m,getMean([La_M],[0.01339678885768229,1407.1775428605974],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1061889.8169) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_202),maxMod(X_T_202)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_235),maxMod(X_T_235)~=f,getMean([La_M],[0.012056838624536752,1880.914540841032],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1417757.25139) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_203),maxMod(X_T_203)~=m,findall_forward(Astdmi_M,(hasLoan(A_M_1,L)~=true,stdMonthInc(A_M_1)~=Astdmi_M),X_T_281_Temp),avg(X_T_281_Temp)~=X_T_281,findall_forward(Aavsi_M,(hasLoan(A_M_2,L)~=true,avgSumOfInc(A_M_2)~=Aavsi_M),X_T_314_Temp),avg(X_T_314_Temp)~=X_T_314,getMean([La_M,X_T_281,X_T_314],[0.013464275560870502,0.14792839696761512,-0.037641983247837185,127.9187646499654],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1443018.30512) := loanStatus(L)~=Ls_M,Ls_M==d,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_365),maxMod(X_T_365)~=f,loanAmount(L)~=La_M,getMean([La_M],[0.01493458311301965,1471.3467203255705],Mean).
+monthlyPayments(L) ~ gaussian(4298.96774194,4710105.26724) := true.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>> currentStringOfFeatures
+''
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_1)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_2)'], ['loanStatus(L, Ls_M), Ls_M == a', 'loanStatus(L, Ls_M), Ls_M == b', 'loanStatus(L, Ls_M), Ls_M == c', 'loanStatus(L, Ls_M), Ls_M == d', '\\+loanStatus(L, Ls_M)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_3)', '\\+avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_4)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_5)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_6)'], ['cnt(true, hasLoan(A_M, L, true), X_T_7)', '\\+cnt(true, hasLoan(A_M, L, true), X_T_8)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_9)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_10)'], ['avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_11)', '\\+avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_12)'], ['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_13), X_T_13 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_14), X_T_14 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_15), X_T_15 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_16)'], ['avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_17)', '\\+avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_18)'], ['avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_19)', '\\+avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_20)'], ['avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_21)', '\\+avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_22)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_23), X_T_23 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_24), X_T_24 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_25)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_26)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_27)']]
+
+>>> actualScores
+[[-2265.6499988436676, nan], [-652.60473257738101, -55.437568553861851, -1410.3001692871276, -128.87709593060214, nan], [-2210.1996072846046, nan], [-2235.4897909086781, nan], [-2265.6034893931401, nan], [-2265.8247004850059, nan], [-2265.8101164320838, nan], [-2248.9854872976443, nan], [-53.796243946487891, -382.33963619967813, -1813.230179822687, nan], [-2253.6363210767126, nan], [-2248.7228298913178, nan], [-2264.9637755112162, nan], [-1037.9232483560604, -1217.503468306697, nan], [-2264.5756697798729, nan]]
+
+>>> actualFeatures[1]
+['loanStatus(L, Ls_M), Ls_M == a', 'loanStatus(L, Ls_M), Ls_M == b', 'loanStatus(L, Ls_M), Ls_M == c', 'loanStatus(L, Ls_M), Ls_M == d', '\\+loanStatus(L, Ls_M)']
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_28)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_29)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_30)', '\\+avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_31)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_32)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_33)'], ['cnt(true, hasLoan(A_M, L, true), X_T_34)', '\\+cnt(true, hasLoan(A_M, L, true), X_T_35)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_36)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_37)'], ['avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_38)', '\\+avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_39)'], ['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_40), X_T_40 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_42), X_T_42 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_43)'], ['avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_44)', '\\+avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_45)'], ['avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_46)', '\\+avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_47)'], ['avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_48)', '\\+avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_49)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_50), X_T_50 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_51), X_T_51 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_52)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_53)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_54)']]
+
+
+>>> actualScores
+[[-659.30883592116777, nan], [-646.74797594213817, nan], [-655.06513776738154, nan], [-659.58422390939802, nan], [-659.77177045429323, nan], [-659.62624529147683, nan], [-657.68203692230452, nan], [-33.389862756202, -155.69759051705489, -457.62278187104943, nan], [-659.39952210937849, nan], [-657.58389192344703, nan], [-659.54943614691103, nan], [-350.60216959494062, -298.58374804365309, nan], [-657.82950157599259, nan]]
+
+[[-659.30883592125201, nan], [-646.74797594211441, nan], [-655.06513776755889, nan], [-659.58422390950034, nan], [-659.77177045446911, nan], [-659.62624529148832, nan], [-657.68203692246493, nan], [-33.389862756202, -155.69759051705489, -457.62278187104943, nan], [-659.39952210922195, nan], [-657.5838919233172, nan], [-659.5494361468667, nan], [-350.94321620804442, -303.84764252926635, nan], [-657.82950157611697, nan]]
+
+
+>>> actualFeatures[featureId]
+['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_40), X_T_40 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_42), X_T_42 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_43)']
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a, maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_55)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_56)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_57)', '\\+avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_58)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_59)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_60)'], ['cnt(true, hasLoan(A_M_1, L, true), X_T_61)', '\\+cnt(true, hasLoan(A_M_1, L, true), X_T_62)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_63)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_64)'], ['avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_65)', '\\+avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_66)'], ['avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_67)', '\\+avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_68)'], ['avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_69)', '\\+avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_70)'], ['avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_71)', '\\+avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_72)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_73), X_T_73 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_75)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_76)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_77)']]
+
+>>> actualScores
+[[-160.09158623854589, nan], [-157.16542894431353, nan], [-160.0863445275524, nan], [-157.55315295027367, nan], [-160.09203967172732, nan], [-159.4058824566313, nan], [-160.0055977691064, nan], [-158.55329920626644, nan], [-160.01094553772845, nan], [-159.97624850143896, nan], [-70.618898020241616, -84.571015230132318, nan], [-158.87353773778469, nan]]
+
+[[-160.0915862385236, nan], [-157.16542894431601, nan], [-160.08634452756209, nan], [-157.5531529502743, nan], [-160.0920396717249, nan], [-159.40588245664, nan], [-160.00559776910083, nan], [-158.55329920625456, nan], [-160.0109455376994, nan], [-159.97624850142012, nan], [-88.188602625702956, -66.268157095136743, nan], [-158.8735377377705, nan]]
+
+
+>>> actualFeatures[featureId]
+['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_73), X_T_73 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_75)']
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a, maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w, maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M_1,L), ratUrbInhab(D_M, Drat_M)), X_T_78)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M_1,L), ratUrbInhab(D_M, Drat_M)), X_T_79)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_80)', '\\+avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_81)'], ['cnt(L, districtClientLoan(D_M, C_M_1, L), X_T_82)', '\\+cnt(L, districtClientLoan(D_M, C_M_1, L), X_T_83)'], ['cnt(true, hasLoan(A_M_1, L, true), X_T_84)', '\\+cnt(true, hasLoan(A_M_1, L, true), X_T_85)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_86)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_87)'], ['avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_88)', '\\+avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_89)'], ['avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_90)', '\\+avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_91)'], ['avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_92)', '\\+avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_93)'], ['avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_94)', '\\+avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_95)'], ['avg(Ca_M, (clientLoan(C_M_1,L,true), age(C_M_1, Ca_M)), X_T_96)', '\\+avg(Ca_M, (clientLoan(C_M_1,L,true), age(C_M_1, Ca_M)), X_T_97)']]
+
+
+>>> actualScores
+[[-86.763503508729798, nan], [-83.318547210147685, nan], [-78.514187101583587, nan], [-82.188562197545465, nan], [-87.789891055000524, nan], [-86.683670616900315, nan], [-75.612686176253803, nan], [-86.841177029459402, nan], [-74.665437881984033, nan], [-85.714387945199562, nan], [-86.833469128067648, nan]]
+
+>>> currentScore
+-84.571015230132318
+
+>>> featureId
+8
+
+>>> actualFeatures[featureId]
+['avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_92)', '\\+avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_93)']
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a, maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w, maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f, avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_92)'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M_1,L), ratUrbInhab(D_M, Drat_M)), X_T_98)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M_1,L), ratUrbInhab(D_M, Drat_M)), X_T_99)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M_2,L,true), stdMonthInc(A_M_2, Astdmi_M)), X_T_100)', '\\+avg(Astdmi_M, (hasLoan(A_M_2,L,true), stdMonthInc(A_M_2, Astdmi_M)), X_T_101)'], ['cnt(L, districtClientLoan(D_M, C_M_1, L), X_T_102)', '\\+cnt(L, districtClientLoan(D_M, C_M_1, L), X_T_103)'], ['cnt(true, hasLoan(A_M_2, L, true), X_T_104)', '\\+cnt(true, hasLoan(A_M_2, L, true), X_T_105)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_106)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_107)'], ['avg(Aavw_M, (hasLoan(A_M_2,L,true), avgSumOfW(A_M_2, Aavw_M)), X_T_108)', '\\+avg(Aavw_M, (hasLoan(A_M_2,L,true), avgSumOfW(A_M_2, Aavw_M)), X_T_109)'], ['avg(Astdmw_M, (hasLoan(A_M_2,L,true), stdMonthW(A_M_2, Astdmw_M)), X_T_110)', '\\+avg(Astdmw_M, (hasLoan(A_M_2,L,true), stdMonthW(A_M_2, Astdmw_M)), X_T_111)'], ['avg(Aavn_M, (hasLoan(A_M_2,L,true), avgNrWith(A_M_2, Aavn_M)), X_T_112)', '\\+avg(Aavn_M, (hasLoan(A_M_2,L,true), avgNrWith(A_M_2, Aavn_M)), X_T_113)'], ['avg(Ca_M, (clientLoan(C_M_1,L,true), age(C_M_1, Ca_M)), X_T_114)', '\\+avg(Ca_M, (clientLoan(C_M_1,L,true), age(C_M_1, Ca_M)), X_T_115)']]
+
+>>> actualScores
+[[-73.968029855148956, nan], [-74.361634772505383, nan], [-75.467983910847693, nan], [-75.814606489845289, nan], [-76.274875794418122, nan], [-73.109700497091239, nan], [-76.137296815570679, nan], [-76.246352184181134, nan], [-75.845648893013163, nan], [-73.860977524277587, nan]]
+
+>>> featureId
+5
+
+>>> currentScore
+-74.665437881984033
+
+>>> actualFeatures[featureId]
+['avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_106)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M_1,L), avgSalary(D_M, Dav_M)), X_T_107)']
+
+
+
+
+===================================================================================
+				Probabilitic Case
+===================================================================================
+
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-09-28 12:40:46,931 INFO     WRMSE = 0.173752, Number of tests consider = 81
+
+monthlyPayments(L) ~ gaussian(4288.24620304,2653539.71054) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_41),maxMod(X_T_41)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_73),maxMod(X_T_73)~=m.
+monthlyPayments(L) ~ gaussian(Mean,8.65236487656e-20) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_41),maxMod(X_T_41)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_74),maxMod(X_T_74)~=f,findall_forward(Aavsi_M,(hasLoan(A_M_1,L)~=true,avgSumOfInc(A_M_1)~=Aavsi_M),X_T_112_Temp),avg(X_T_112_Temp)~=X_T_112,findall_forward(Dav_M,(districtClientLoan(D_M,C_M_1,L),avgSalary(D_M)~=Dav_M),X_T_126_Temp),avg(X_T_126_Temp)~=X_T_126,findall_forward(Astdmw_M,(hasLoan(A_M_2,L)~=true,stdMonthW(A_M_2)~=Astdmw_M),X_T_146_Temp),avg(X_T_146_Temp)~=X_T_146,findall_forward(Drat_M,(districtClientLoan(D_M_1,C_M_1,L),ratUrbInhab(D_M_1)~=Drat_M),X_T_152_Temp),avg(X_T_152_Temp)~=X_T_152,getMean([X_T_112,X_T_126,X_T_146,X_T_152],[0.043935497933751698,-0.26904857685088407,-0.068146320382068137,-4.8282295286649379,4096.0559119489644],Mean).
+monthlyPayments(L) ~ gaussian(Mean,3715013.69199) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_42),maxMod(X_T_42)~=m,loanAmount(L)~=La_M,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_219),maxMod(X_T_219)~=m,getMean([La_M],[0.022440239933875762,2631.4307482570648],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1218624.92852) := loanStatus(L)~=Ls_M,Ls_M==a,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_42),maxMod(X_T_42)~=m,loanAmount(L)~=La_M,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_220),maxMod(X_T_220)~=f,getMean([La_M],[0.049051118830214173,1706.5354553271895],Mean).
+monthlyPayments(L) ~ gaussian(Mean,61779.8618779) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_304),maxMod(X_T_304)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_336),maxMod(X_T_336)~=m,getMean([La_M],[0.013751084509716941,1411.3198998120642],Mean).
+monthlyPayments(L) ~ gaussian(Mean,736072.716597) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_304),maxMod(X_T_304)~=w,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_337),maxMod(X_T_337)~=f,getMean([La_M],[0.011561195604605714,1937.1234167541993],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1417757.25139) := loanStatus(L)~=Ls_M,Ls_M==c,loanAmount(L)~=La_M,findall_forward(Afr_M,(hasLoan(A_M,L)~=true,freq(A_M)~=Afr_M),X_T_305),maxMod(X_T_305)~=m,findall_forward(Astdmi_M,(hasLoan(A_M_1,L)~=true,stdMonthInc(A_M_1)~=Astdmi_M),X_T_383_Temp),avg(X_T_383_Temp)~=X_T_383,findall_forward(Aavsi_M,(hasLoan(A_M_2,L)~=true,avgSumOfInc(A_M_2)~=Aavsi_M),X_T_416_Temp),avg(X_T_416_Temp)~=X_T_416,getMean([La_M,X_T_383,X_T_416],[0.013464275560870168,0.14792839696760049,-0.037641983247833563,127.91876465013775],Mean).
+monthlyPayments(L) ~ gaussian(Mean,1443018.30512) := loanStatus(L)~=Ls_M,Ls_M==d,findall_forward(Ge_M,(clientLoan(C_M,L)~=true,gender(C_M)~=Ge_M),X_T_467),maxMod(X_T_467)~=f,loanAmount(L)~=La_M,getMean([La_M],[0.014934583113019966,1471.3467203254741],Mean).
+monthlyPayments(L) ~ gaussian(4298.96774194,4710105.26724) := true.
+
+
+
+>>> currentStringOfFeatures
+''
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_1)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_2)'], ['loanStatus(L, Ls_M), Ls_M == a', 'loanStatus(L, Ls_M), Ls_M == b', 'loanStatus(L, Ls_M), Ls_M == c', 'loanStatus(L, Ls_M), Ls_M == d', '\\+loanStatus(L, Ls_M)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_3)', '\\+avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_4)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_5)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_6)'], ['cnt(true, hasLoan(A_M, L, true), X_T_7)', '\\+cnt(true, hasLoan(A_M, L, true), X_T_8)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_9)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_10)'], ['avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_11)', '\\+avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_12)'], ['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_13), X_T_13 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_14), X_T_14 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_15), X_T_15 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_16)'], ['avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_17)', '\\+avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_18)'], ['avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_19)', '\\+avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_20)'], ['avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_21)', '\\+avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_22)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_23), X_T_23 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_24), X_T_24 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_25)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_26)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_27)']]
+
+
+
+>>> actualScores
+[[-2265.6499988431415, nan], [-652.60473257738101, -55.437568553861851, -1410.3001692871276, -128.87709593060214, nan], [-2210.1996072838897, nan], [-2235.4897909073238, nan], [-2265.603489393352, nan], [-2265.8247004864938, nan], [-2265.8101164324175, nan], [-2248.9854872970723, nan], [-53.796243946487891, -382.33963619967813, -1813.230179822687, nan], [-2253.6363210766617, nan], [-2248.7228298912755, nan], [-2264.9637755099598, nan], [-1045.8313541214543, -1216.7339292733927, nan], [-2264.5756697790885, nan]]
+
+
+>>> featureId
+1
+
+>>> currentScore
+-2256.1841373537959
+
+>>> actualFeatures[featureId]
+['loanStatus(L, Ls_M), Ls_M == a', 'loanStatus(L, Ls_M), Ls_M == b', 'loanStatus(L, Ls_M), Ls_M == c', 'loanStatus(L, Ls_M), Ls_M == d', '\\+loanStatus(L, Ls_M)']
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_28)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_29)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_30)', '\\+avg(Astdmi_M, (hasLoan(A_M,L,true), stdMonthInc(A_M, Astdmi_M)), X_T_31)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_32)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_33)'], ['cnt(true, hasLoan(A_M, L, true), X_T_34)', '\\+cnt(true, hasLoan(A_M, L, true), X_T_35)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_36)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_37)'], ['avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_38)', '\\+avg(Aavw_M, (hasLoan(A_M,L,true), avgSumOfW(A_M, Aavw_M)), X_T_39)'], ['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_40), X_T_40 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_42), X_T_42 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_43)'], ['avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_44)', '\\+avg(Astdmw_M, (hasLoan(A_M,L,true), stdMonthW(A_M, Astdmw_M)), X_T_45)'], ['avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_46)', '\\+avg(Aavsi_M, (hasLoan(A_M,L,true), avgSumOfInc(A_M, Aavsi_M)), X_T_47)'], ['avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_48)', '\\+avg(Aavn_M, (hasLoan(A_M,L,true), avgNrWith(A_M, Aavn_M)), X_T_49)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_50), X_T_50 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_51), X_T_51 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_52)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_53)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_54)']]
+
+>>> actualScores
+[[-659.30883592125201, nan], [-646.74797594211441, nan], [-655.06513776755889, nan], [-659.58422390950034, nan], [-659.77177045446911, nan], [-659.62624529148832, nan], [-657.68203692246493, nan], [-33.389862756202, -155.69759051705489, -457.62278187104943, nan], [-659.39952210922195, nan], [-657.5838919233172, nan], [-659.5494361468667, nan], [-350.94321620804442, -303.84764252926635, nan], [-657.82950157611697, nan]]
+
+>>> featureId
+7
+
+>>> currentScore
+-652.60473257738101
+
+>>> actualFeatures[featureId]
+['maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_40), X_T_40 == i', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w', 'maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_42), X_T_42 == m', '\\+maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_43)']
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>> currentStringOfFeatures
+'loanStatus(L, Ls_M), Ls_M == a, maxMod(Afr_M, (hasLoan(A_M,L,true), freq(A_M, Afr_M)), X_T_41), X_T_41 == w'
+
+>>> actualFeatures
+[['avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_55)', '\\+avg(Drat_M, (districtClientLoan(D_M,C_M,L), ratUrbInhab(D_M, Drat_M)), X_T_56)'], ['loanAmount(L, La_M)', '\\+loanAmount(L, La_M)'], ['avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_57)', '\\+avg(Astdmi_M, (hasLoan(A_M_1,L,true), stdMonthInc(A_M_1, Astdmi_M)), X_T_58)'], ['cnt(L, districtClientLoan(D_M, C_M, L), X_T_59)', '\\+cnt(L, districtClientLoan(D_M, C_M, L), X_T_60)'], ['cnt(true, hasLoan(A_M_1, L, true), X_T_61)', '\\+cnt(true, hasLoan(A_M_1, L, true), X_T_62)'], ['avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_63)', '\\+avg(Dav_M, (districtClientLoan(D_M,C_M,L), avgSalary(D_M, Dav_M)), X_T_64)'], ['avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_65)', '\\+avg(Aavw_M, (hasLoan(A_M_1,L,true), avgSumOfW(A_M_1, Aavw_M)), X_T_66)'], ['avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_67)', '\\+avg(Astdmw_M, (hasLoan(A_M_1,L,true), stdMonthW(A_M_1, Astdmw_M)), X_T_68)'], ['avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_69)', '\\+avg(Aavsi_M, (hasLoan(A_M_1,L,true), avgSumOfInc(A_M_1, Aavsi_M)), X_T_70)'], ['avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_71)', '\\+avg(Aavn_M, (hasLoan(A_M_1,L,true), avgNrWith(A_M_1, Aavn_M)), X_T_72)'], ['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_73), X_T_73 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_75)'], ['avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_76)', '\\+avg(Ca_M, (clientLoan(C_M,L,true), age(C_M, Ca_M)), X_T_77)']]
+
+>>> actualScores
+[[-160.0915862385236, nan], [-157.16542894431601, nan], [-160.08634452756209, nan], [-157.5531529502743, nan], [-160.0920396717249, nan], [-159.40588245664, nan], [-160.00559776910083, nan], [-158.55329920625456, nan], [-160.0109455376994, nan], [-159.97624850142012, nan], [-88.188602625702956, -66.268157095136743, nan], [-158.8735377377705, nan]]
+
+>>> featureId
+10
+
+>>> currentScore
+-155.69759051705489
+
+>>> actualFeatures[featureId]
+['maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_73), X_T_73 == m', 'maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_74), X_T_74 == f', '\\+maxMod(Ge_M, (clientLoan(C_M,L,true), gender(C_M, Ge_M)), X_T_75)']
+
+
+

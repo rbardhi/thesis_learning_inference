@@ -1,0 +1,385 @@
+University Dataset
+==================
+
+grade(C,S) ~ finite([Probability1:a,Probability2:b,Probability3:c,Probability4:d]) := sat(C,S)~=X_M,avg(X1_M,capability(P_M,S)~=X1_M,X_T_14),diff(C)~=D_M,D_M==low, softmax([[-2.0455882433681931,0.19599757352178029,4.5938258149306899],[-0.039874953555644521,0.60262338933959803,-0.63908286185811636],[0.60755971711854084,0.26507045791470146,-1.3074133132557624],[1.4779034798052897,-1.0636914207760808,-2.6473296398168187]],[X_M,X_T_14],[Probability1,Probability2,Probability3,Probability4]).
+grade(C,S) ~ finite([1.0:b]) := sat(C,S)~=X_M,avg(X1_M,capability(P_M,S)~=X1_M,X_T_14),diff(C)~=D_M,D_M==high,maxMod(T_M,(ra(P_M_1,S),teachingability(P_M_1)~=T_M),X_T_37),X_T_37==mid,maxMod(X4_M,(ra(P_M_2,S),popularity(P_M_2)~=X4_M),X_T_41),X_T_41==low.
+grade(C,S) ~ finite([Probability:a,Probability2:b]) := sat(C,S)~=X_M,avg(X1_M,capability(P_M,S)~=X1_M,X_T_14),diff(C)~=D_M,D_M==high,maxMod(T_M,(ra(P_M_1,S),teachingability(P_M_1)~=T_M),X_T_37),X_T_37==mid,maxMod(X4_M,(ra(P_M_2,S),popularity(P_M_2)~=X4_M),X_T_42),X_T_42==high, logistic([0.08073853777776933, -0.2422826138697726, 1.2968668641948378],[X_M, X_T_14],Probability), Probability2 is 1.0-Probability.
+grade(C,S) ~ finite([Probability1:b,Probability2:c,Probability3:d]) := sat(C,S)~=X_M,avg(X1_M,capability(P_M,S)~=X1_M,X_T_14),diff(C)~=D_M,D_M==high,maxMod(T_M,(ra(P_M_1,S),teachingability(P_M_1)~=T_M),X_T_38),X_T_38==high, softmax([[-1.0545185118247502,-0.21872116519127069,3.6410902626426269],[0.33285690096346604,0.31552199862415636,-1.1722691550769107],[0.72166161086128455,-0.096800833432885744,-2.4688211075657169]],[X_M,X_T_14],[Probability1,Probability2,Probability3]).
+grade(C,S) ~ finite([Probability1:a,Probability2:b,Probability3:c,Probability4:d]) := sat(C,S)~=X_M,avg(X1_M,capability(P_M,S)~=X1_M,X_T_14),diff(C)~=D_M,D_M==high,\+maxMod(T_M,(ra(P_M_1,S),teachingability(P_M_1)~=T_M),X_T_39), softmax([[-1.6221005052240751,0.0,2.9958653951962879],[-0.34736205139856058,0.0,0.78985813582224063],[0.25824017136085431,0.0,-0.19363987401203997],[1.7112223852617894,0.0,-3.5920836570064951]],[X_M,X_T_14],[Probability1,Probability2,Probability3,Probability4]).
+grade(C,S) ~ finite([0.34782608695652173:a,0.1956521739130435:c,0.31521739130434784:b,0.14130434782608695:d]) := true.
+
+
+
+Scenario 0 (Trivial Case)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.508012, Number of tests consider = 4
+
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.616321, Number of tests consider = 3
+
+Scenario 1 (Remove Omissions)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.559158, Number of tests consider = 6
+
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.684796, Number of tests consider = 5
+
+
+Scenario 2 (Remove Omissions and replace with Mode)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.357811, Number of tests consider = 5
+
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+MAE = 0.723715, Number of tests consider = 4
+
+Scenario 3 (Proposed Method)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.458125, Number of tests consider = 4
+
+
+
+******************************************************************************
+			Omission 60%
+******************************************************************************
+Scenario 0 (Trivial Case)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.417680, Number of tests consider = 6
+
+
+Scenario 1 (Remove Omissions)
+===========
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.666436, Number of tests consider = 6
+
+Scenario 2 (Remove Omissions and replace with Mode)
+============
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.310829, Number of tests consider = 6
+
+Scenario 3 (Proposed Method)
+============================
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.464810, Number of tests consider = 4
+
+
+
+
+*******************************************************
+80% removal 
+Scenario 1
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.451920, Number of tests consider = 6
+
+*********************************************************
+20% removal 
+**********************************************************
+Scenario 1
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.559103, Number of tests consider = 6
+
+
+Scenario 2
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.632412, Number of tests consider = 6
+
+
+Scenario 3
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.383606, Number of tests consider = 4
+
+
+
+******************************************************************
+10%
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.344895, Number of tests consider = 6
+
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.354172, Number of tests consider = 6
+
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.463134, Number of tests consider = 4
+
+
+
+
+*********************************************************
+30% removal 
+**********************************************************
+Scenario 1
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.566108, Number of tests consider = 5
+
+Scenario 2
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.688764, Number of tests consider = 6
+
+Scenario 3
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.440829, Number of tests consider = 4
+
+
+*********************************************************
+40% removal 
+**********************************************************
+Scenario 1
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.559828, Number of tests consider = 6
+
+Scenario 2
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.681614, Number of tests consider = 6
+
+Scenario 3
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.476683, Number of tests consider = 6
+
+
+*********************************************************
+50% removal 
+**********************************************************
+Scenario 1
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.589274, Number of tests consider = 6
+
+Scenario 2
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.654000, Number of tests consider = 6
+
+Scenario 3
+----------
+intelligence(12) ~ val(2).
+intelligence(13) ~ val(2).
+intelligence(22) ~ val(2).
+intelligence(23) ~ val(2).
+intelligence(32) ~ val(1).
+intelligence(33) ~ val(1).
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+% Restoring file /usr/local/lib/Yap/startup.yss
+MAE = 0.511629, Number of tests consider = 6
+

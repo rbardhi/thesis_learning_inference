@@ -1,0 +1,486 @@
+%Omission
+rating(8,high).
+rating(9,high).
+rating(10,high).
+rating(11,low).
+rating(12,low).
+rating(13,low).
+grade(4,18,b).
+grade(4,29,c).
+grade(4,38,d).
+grade(4,40,a).
+grade(5,4,a).
+grade(5,5,b).
+grade(5,29,d).
+grade(5,34,c).
+grade(5,38,d).
+grade(5,39,a).
+grade(5,41,a).
+grade(6,4,a).
+grade(6,19,b).
+grade(6,25,c).
+grade(6,30,d).
+grade(6,41,a).
+grade(7,4,b).
+grade(7,5,b).
+grade(7,40,a).
+grade(8,5,a).
+grade(8,6,a).
+grade(8,9,a).
+grade(8,10,a).
+grade(8,11,b).
+grade(8,41,a).
+grade(9,6,a).
+grade(9,10,b).
+grade(9,12,b).
+grade(9,15,b).
+grade(9,23,b).
+grade(10,11,a).
+grade(10,14,a).
+grade(10,17,c).
+grade(10,18,a).
+grade(10,23,b).
+grade(10,32,c).
+grade(11,16,b).
+grade(11,17,b).
+grade(11,23,c).
+grade(11,28,d).
+grade(11,32,d).
+grade(11,37,c).
+grade(12,17,b).
+grade(12,21,a).
+grade(12,22,b).
+grade(12,23,a).
+grade(12,24,a).
+grade(12,26,b).
+grade(13,14,b).
+grade(13,16,c).
+grade(13,21,b).
+grade(13,26,c).
+grade(13,27,c).
+grade(13,33,d).
+
+%OmissionDC
+rating(8) ~ val(high).
+rating(9) ~ val(high).
+rating(10) ~ val(high).
+rating(11) ~ val(low).
+rating(12) ~ val(low).
+rating(13) ~ val(low).
+grade(4,18) ~ val(b).
+grade(4,29) ~ val(c).
+grade(4,38) ~ val(d).
+grade(4,40) ~ val(a).
+grade(5,4) ~ val(a).
+grade(5,5) ~ val(b).
+grade(5,29) ~ val(d).
+grade(5,34) ~ val(c).
+grade(5,38) ~ val(d).
+grade(5,39) ~ val(a).
+grade(5,41) ~ val(a).
+grade(6,4) ~ val(a).
+grade(6,19) ~ val(b).
+grade(6,25) ~ val(c).
+grade(6,30) ~ val(d).
+grade(6,41) ~ val(a).
+grade(7,4) ~ val(b).
+grade(7,5) ~ val(b).
+grade(7,40) ~ val(a).
+grade(8,5) ~ val(a).
+grade(8,6) ~ val(a).
+grade(8,9) ~ val(a).
+grade(8,10) ~ val(a).
+grade(8,11) ~ val(b).
+grade(8,41) ~ val(a).
+grade(9,6) ~ val(a).
+grade(9,10) ~ val(b).
+grade(9,12) ~ val(b).
+grade(9,15) ~ val(b).
+grade(9,23) ~ val(b).
+grade(10,11) ~ val(a).
+grade(10,14) ~ val(a).
+grade(10,17) ~ val(c).
+grade(10,18) ~ val(a).
+grade(10,23) ~ val(b).
+grade(10,32) ~ val(c).
+grade(11,16) ~ val(b).
+grade(11,17) ~ val(b).
+grade(11,23) ~ val(c).
+grade(11,28) ~ val(d).
+grade(11,32) ~ val(d).
+grade(11,37) ~ val(c).
+grade(12,17) ~ val(b).
+grade(12,21) ~ val(a).
+grade(12,22) ~ val(b).
+grade(12,23) ~ val(a).
+grade(12,24) ~ val(a).
+grade(12,26) ~ val(b).
+grade(13,14) ~ val(b).
+grade(13,16) ~ val(c).
+grade(13,21) ~ val(b).
+grade(13,26) ~ val(c).
+grade(13,27) ~ val(c).
+grade(13,33) ~ val(d).
+
+%OmissionMode
+rating(8,high).
+rating(9,high).
+rating(10,high).
+rating(11,high).
+rating(12,high).
+rating(13,high).
+grade(4,18,a).
+grade(4,29,a).
+grade(4,38,a).
+grade(4,40,a).
+grade(5,4,c).
+grade(5,5,b).
+grade(5,29,a).
+grade(5,34,a).
+grade(5,38,a).
+grade(5,39,a).
+grade(5,41,a).
+grade(6,4,a).
+grade(6,19,a).
+grade(6,25,a).
+grade(6,30,a).
+grade(6,41,a).
+grade(7,4,a).
+grade(7,5,b).
+grade(7,40,a).
+grade(8,5,a).
+grade(8,6,a).
+grade(8,9,a).
+grade(8,10,a).
+grade(8,11,a).
+grade(8,41,a).
+grade(9,6,d).
+grade(9,10,b).
+grade(9,12,b).
+grade(9,15,b).
+grade(9,23,b).
+grade(10,11,a).
+grade(10,14,a).
+grade(10,17,a).
+grade(10,18,a).
+grade(10,23,a).
+grade(10,32,d).
+grade(11,16,b).
+grade(11,17,b).
+grade(11,23,b).
+grade(11,28,b).
+grade(11,32,d).
+grade(11,37,d).
+grade(12,17,a).
+grade(12,21,a).
+grade(12,22,a).
+grade(12,23,a).
+grade(12,24,a).
+grade(12,26,a).
+grade(13,14,b).
+grade(13,16,b).
+grade(13,21,b).
+grade(13,26,b).
+grade(13,27,b).
+grade(13,33,d).
+
+%OmissionModeDC
+rating(8) ~ val(high).
+rating(9) ~ val(high).
+rating(10) ~ val(high).
+rating(11) ~ val(high).
+rating(12) ~ val(high).
+rating(13) ~ val(high).
+grade(4,18) ~ val(a).
+grade(4,29) ~ val(a).
+grade(4,38) ~ val(a).
+grade(4,40) ~ val(a).
+grade(5,4) ~ val(c).
+grade(5,5) ~ val(b).
+grade(5,29) ~ val(a).
+grade(5,34) ~ val(a).
+grade(5,38) ~ val(a).
+grade(5,39) ~ val(a).
+grade(5,41) ~ val(a).
+grade(6,4) ~ val(a).
+grade(6,19) ~ val(a).
+grade(6,25) ~ val(a).
+grade(6,30) ~ val(a).
+grade(6,41) ~ val(a).
+grade(7,4) ~ val(a).
+grade(7,5) ~ val(b).
+grade(7,40) ~ val(a).
+grade(8,5) ~ val(a).
+grade(8,6) ~ val(a).
+grade(8,9) ~ val(a).
+grade(8,10) ~ val(a).
+grade(8,11) ~ val(a).
+grade(8,41) ~ val(a).
+grade(9,6) ~ val(d).
+grade(9,10) ~ val(b).
+grade(9,12) ~ val(b).
+grade(9,15) ~ val(b).
+grade(9,23) ~ val(b).
+grade(10,11) ~ val(a).
+grade(10,14) ~ val(a).
+grade(10,17) ~ val(a).
+grade(10,18) ~ val(a).
+grade(10,23) ~ val(a).
+grade(10,32) ~ val(d).
+grade(11,16) ~ val(b).
+grade(11,17) ~ val(b).
+grade(11,23) ~ val(b).
+grade(11,28) ~ val(b).
+grade(11,32) ~ val(d).
+grade(11,37) ~ val(d).
+grade(12,17) ~ val(a).
+grade(12,21) ~ val(a).
+grade(12,22) ~ val(a).
+grade(12,23) ~ val(a).
+grade(12,24) ~ val(a).
+grade(12,26) ~ val(a).
+grade(13,14) ~ val(b).
+grade(13,16) ~ val(b).
+grade(13,21) ~ val(b).
+grade(13,26) ~ val(b).
+grade(13,27) ~ val(b).
+grade(13,33) ~ val(d).
+
+%OmissionEnumerated
+rating(8,low).
+rating(8,high).
+rating(9,low).
+rating(9,high).
+rating(10,low).
+rating(10,high).
+rating(11,low).
+rating(11,high).
+rating(12,low).
+rating(12,high).
+rating(13,low).
+rating(13,high).
+grade(4,18,a).
+grade(4,18,b).
+grade(4,18,c).
+grade(4,18,d).
+grade(4,29,a).
+grade(4,29,b).
+grade(4,29,c).
+grade(4,29,d).
+grade(4,38,a).
+grade(4,38,b).
+grade(4,38,c).
+grade(4,38,d).
+grade(4,40,a).
+grade(4,40,b).
+grade(4,40,c).
+grade(4,40,d).
+grade(5,4,a).
+grade(5,4,b).
+grade(5,4,c).
+grade(5,4,d).
+grade(5,5,a).
+grade(5,5,b).
+grade(5,5,c).
+grade(5,5,d).
+grade(5,29,a).
+grade(5,29,b).
+grade(5,29,c).
+grade(5,29,d).
+grade(5,34,a).
+grade(5,34,b).
+grade(5,34,c).
+grade(5,34,d).
+grade(5,38,a).
+grade(5,38,b).
+grade(5,38,c).
+grade(5,38,d).
+grade(5,39,a).
+grade(5,39,b).
+grade(5,39,c).
+grade(5,39,d).
+grade(5,41,a).
+grade(5,41,b).
+grade(5,41,c).
+grade(5,41,d).
+grade(6,4,a).
+grade(6,4,b).
+grade(6,4,c).
+grade(6,4,d).
+grade(6,19,a).
+grade(6,19,b).
+grade(6,19,c).
+grade(6,19,d).
+grade(6,25,a).
+grade(6,25,b).
+grade(6,25,c).
+grade(6,25,d).
+grade(6,30,a).
+grade(6,30,b).
+grade(6,30,c).
+grade(6,30,d).
+grade(6,41,a).
+grade(6,41,b).
+grade(6,41,c).
+grade(6,41,d).
+grade(7,4,a).
+grade(7,4,b).
+grade(7,4,c).
+grade(7,4,d).
+grade(7,5,a).
+grade(7,5,b).
+grade(7,5,c).
+grade(7,5,d).
+grade(7,40,a).
+grade(7,40,b).
+grade(7,40,c).
+grade(7,40,d).
+grade(8,5,a).
+grade(8,5,b).
+grade(8,5,c).
+grade(8,5,d).
+grade(8,6,a).
+grade(8,6,b).
+grade(8,6,c).
+grade(8,6,d).
+grade(8,9,a).
+grade(8,9,b).
+grade(8,9,c).
+grade(8,9,d).
+grade(8,10,a).
+grade(8,10,b).
+grade(8,10,c).
+grade(8,10,d).
+grade(8,11,a).
+grade(8,11,b).
+grade(8,11,c).
+grade(8,11,d).
+grade(8,41,a).
+grade(8,41,b).
+grade(8,41,c).
+grade(8,41,d).
+grade(9,6,a).
+grade(9,6,b).
+grade(9,6,c).
+grade(9,6,d).
+grade(9,10,a).
+grade(9,10,b).
+grade(9,10,c).
+grade(9,10,d).
+grade(9,12,a).
+grade(9,12,b).
+grade(9,12,c).
+grade(9,12,d).
+grade(9,15,a).
+grade(9,15,b).
+grade(9,15,c).
+grade(9,15,d).
+grade(9,23,a).
+grade(9,23,b).
+grade(9,23,c).
+grade(9,23,d).
+grade(10,11,a).
+grade(10,11,b).
+grade(10,11,c).
+grade(10,11,d).
+grade(10,14,a).
+grade(10,14,b).
+grade(10,14,c).
+grade(10,14,d).
+grade(10,17,a).
+grade(10,17,b).
+grade(10,17,c).
+grade(10,17,d).
+grade(10,18,a).
+grade(10,18,b).
+grade(10,18,c).
+grade(10,18,d).
+grade(10,23,a).
+grade(10,23,b).
+grade(10,23,c).
+grade(10,23,d).
+grade(10,32,a).
+grade(10,32,b).
+grade(10,32,c).
+grade(10,32,d).
+grade(11,16,a).
+grade(11,16,b).
+grade(11,16,c).
+grade(11,16,d).
+grade(11,17,a).
+grade(11,17,b).
+grade(11,17,c).
+grade(11,17,d).
+grade(11,23,a).
+grade(11,23,b).
+grade(11,23,c).
+grade(11,23,d).
+grade(11,28,a).
+grade(11,28,b).
+grade(11,28,c).
+grade(11,28,d).
+grade(11,32,a).
+grade(11,32,b).
+grade(11,32,c).
+grade(11,32,d).
+grade(11,37,a).
+grade(11,37,b).
+grade(11,37,c).
+grade(11,37,d).
+grade(12,17,a).
+grade(12,17,b).
+grade(12,17,c).
+grade(12,17,d).
+grade(12,21,a).
+grade(12,21,b).
+grade(12,21,c).
+grade(12,21,d).
+grade(12,22,a).
+grade(12,22,b).
+grade(12,22,c).
+grade(12,22,d).
+grade(12,23,a).
+grade(12,23,b).
+grade(12,23,c).
+grade(12,23,d).
+grade(12,24,a).
+grade(12,24,b).
+grade(12,24,c).
+grade(12,24,d).
+grade(12,26,a).
+grade(12,26,b).
+grade(12,26,c).
+grade(12,26,d).
+grade(13,14,a).
+grade(13,14,b).
+grade(13,14,c).
+grade(13,14,d).
+grade(13,16,a).
+grade(13,16,b).
+grade(13,16,c).
+grade(13,16,d).
+grade(13,21,a).
+grade(13,21,b).
+grade(13,21,c).
+grade(13,21,d).
+grade(13,26,a).
+grade(13,26,b).
+grade(13,26,c).
+grade(13,26,d).
+grade(13,27,a).
+grade(13,27,b).
+grade(13,27,c).
+grade(13,27,d).
+grade(13,33,a).
+grade(13,33,b).
+grade(13,33,c).
+grade(13,33,d).
+
+%Test
+intelligence(12,2).
+intelligence(13,2).
+intelligence(22,2).
+intelligence(23,2).
+intelligence(32,1).
+intelligence(33,1).
+

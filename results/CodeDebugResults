@@ -1,0 +1,105 @@
+Rules learned scenario where cells are deleted
+==============================================
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_25),minMod(X_T_25)~=dur0.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_26),minMod(X_T_26)~=dur1.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_27),minMod(X_T_27)~=dur2.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_28),minMod(X_T_28)~=dur3.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_29),minMod(X_T_29)~=dur4.
+type(M) ~ finite([0.07142857142857142:c,0.9285714285714286:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_307),maxMod(X_T_307)~=tcho1,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_355),minMod(X_T_355)~=one.
+type(M) ~ finite([0.2:c,0.8:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_307),maxMod(X_T_307)~=tcho1,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_356),minMod(X_T_356)~=two.
+type(M) ~ finite([0.3333333333333333:c,0.6666666666666666:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_307),maxMod(X_T_307)~=tcho1,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_357),minMod(X_T_357)~=three.
+type(M) ~ finite([1.0:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_307),maxMod(X_T_307)~=tcho1,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_359),\+minMod(X_T_359)~=_.
+type(M) ~ finite([0.2857142857142857:c,0.7142857142857143:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_308),maxMod(X_T_308)~=tcho2,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_481),minMod(X_T_481)~=one.
+type(M) ~ finite([0.1:c,0.9:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_308),maxMod(X_T_308)~=tcho2,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_482),minMod(X_T_482)~=two.
+type(M) ~ finite([1.0:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_308),maxMod(X_T_308)~=tcho2,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_483),minMod(X_T_483)~=three.
+type(M) ~ finite([0.2:c,0.8:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_308),maxMod(X_T_308)~=tcho2,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_485),\+minMod(X_T_485)~=_.
+type(M) ~ finite([0.3:c,0.7:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_278),maxMod(X_T_278)~=c,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_642),minMod(X_T_642)~=one.
+type(M) ~ finite([0.375:c,0.625:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_278),maxMod(X_T_278)~=c,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_643),minMod(X_T_643)~=two.
+type(M) ~ finite([0.5714285714285714:c,0.42857142857142855:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_735),minMod(X_T_735)~=one,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_746),minMod(X_T_746)~=tcho0.
+type(M) ~ finite([0.14285714285714285:c,0.8571428571428571:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_735),minMod(X_T_735)~=one,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_747),minMod(X_T_747)~=tcho1.
+type(M) ~ finite([1.0:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_735),minMod(X_T_735)~=one,findall_forward(Tc_M,(rel12(In_M_1,M),tcho(In_M_1)~=Tc_M),X_T_748),minMod(X_T_748)~=tcho2.
+type(M) ~ finite([0.38095238095238093:c,0.6190476190476191:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_736),minMod(X_T_736)~=two.
+type(M) ~ finite([0.18181818181818182:c,0.8181818181818182:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_737),minMod(X_T_737)~=three.
+type(M) ~ finite([0.125:c,0.875:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_739),\+minMod(X_T_739)~=_.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_280),maxMod(X_T_280)~=e,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_958),minMod(X_T_958)~=one.
+type(M) ~ finite([0.45454545454545453:c,0.5454545454545454:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_280),maxMod(X_T_280)~=e,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_959),minMod(X_T_959)~=two.
+type(M) ~ finite([0.6666666666666666:c,0.3333333333333333:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_280),maxMod(X_T_280)~=e,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_960),minMod(X_T_960)~=three.
+type(M) ~ finite([1.0:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_280),maxMod(X_T_280)~=e,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_962),\+minMod(X_T_962)~=_.
+type(M) ~ finite([0.7222222222222222:c,0.2777777777777778:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_1109),minMod(X_T_1109)~=one.
+type(M) ~ finite([0.7647058823529411:c,0.23529411764705882:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_1110),minMod(X_T_1110)~=two.
+type(M) ~ finite([0.75:c,0.25:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_1111),minMod(X_T_1111)~=three.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_1112),minMod(X_T_1112)~=four.
+type(M) ~ finite([0.625:c,0.375:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f,findall_forward(Act_M,(rel11(B_M,M),activity(B_M)~=Act_M),X_T_1113),\+minMod(X_T_1113)~=_.
+
+
+
+
+Rules learned when nothing is removed 
+=====================================
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_25),minMod(X_T_25)~=dur0.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_26),minMod(X_T_26)~=dur1.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_27),minMod(X_T_27)~=dur2.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_28),minMod(X_T_28)~=dur3.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_29),minMod(X_T_29)~=dur4.
+type(M) ~ finite([0.6666666666666666:c,0.3333333333333333:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_276),maxMod(X_T_276)~=a.
+type(M) ~ finite([0.06666666666666667:c,0.9333333333333333:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_277),maxMod(X_T_277)~=b.
+type(M) ~ finite([0.23076923076923078:c,0.7692307692307693:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_278),maxMod(X_T_278)~=c.
+type(M) ~ finite([0.2711864406779661:c,0.7288135593220338:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_279),maxMod(X_T_279)~=d.
+type(M) ~ finite([0.48148148148148145:c,0.5185185185185185:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_280),maxMod(X_T_280)~=e.
+type(M) ~ finite([0.6739130434782609:c,0.32608695652173914:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_30),\+minMod(X_T_30)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_281),maxMod(X_T_281)~=f.
+
+Confusion Matrix:
+[[ 0  0  0]
+ [ 1 51  7]
+ [ 0  6 35]]
+Labels: ['_140402', 'c', 'b']
+Accuracy: 0.860000
+
+Confusion Matrix:
+[[ 0  0  0  0]
+ [ 0  0  0  0]
+ [ 0  1 44 14]
+ [ 1  0  6 34]]
+Labels: ['_150150', '_140402', 'c', 'b']
+Accuracy: 0.780000
+
+Confusion Matrix:
+[[ 0  0  0]
+ [ 1 49  9]
+ [ 0  6 35]]
+Labels: ['_140402', 'c', 'b']
+Accuracy: 0.840000
+
+Rules learned using 100 number of samples 
+=======================================
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),minMod(X_T_13)~=dur0.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_14),minMod(X_T_14)~=dur1.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_15),minMod(X_T_15)~=dur2,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_79),maxMod(X_T_79)~=tcho0.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_15),minMod(X_T_15)~=dur2,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_80),maxMod(X_T_80)~=tcho1.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_15),minMod(X_T_15)~=dur2,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_81),maxMod(X_T_81)~=tcho2.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_15),minMod(X_T_15)~=dur2,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_82),maxMod(X_T_82)~=tcho3.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_16),minMod(X_T_16)~=dur3.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_17),minMod(X_T_17)~=dur4.
+type(M) ~ finite([0.6481715006305171:c,0.351828499369483:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_18),\+minMod(X_T_18)~=_,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_227),maxMod(X_T_227)~=tcho0.
+type(M) ~ finite([0.3520488230165651:c,0.6479511769834351:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_18),\+minMod(X_T_18)~=_,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_228),maxMod(X_T_228)~=tcho1.
+type(M) ~ finite([0.17820807351493276:c,0.8217919264850673:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_18),\+minMod(X_T_18)~=_,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_229),maxMod(X_T_229)~=tcho2.
+type(M) ~ finite([0.17769166897315253:c,0.8223083310268476:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_18),\+minMod(X_T_18)~=_,findall_forward(Tc_M,(rel12(In_M,M),tcho(In_M)~=Tc_M),X_T_230),maxMod(X_T_230)~=tcho3.
+
+
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_8),minMod(X_T_8)~=dur0.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_9),minMod(X_T_9)~=dur1.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_28),maxMod(X_T_28)~=a.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_29),maxMod(X_T_29)~=b.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_30),maxMod(X_T_30)~=c.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_31),maxMod(X_T_31)~=d.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_32),maxMod(X_T_32)~=e.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_10),minMod(X_T_10)~=dur2,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_33),maxMod(X_T_33)~=f.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_11),minMod(X_T_11)~=dur3.
+type(M) ~ finite([1.0:c]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_12),minMod(X_T_12)~=dur4.
+type(M) ~ finite([0.8888888888888894:c,0.11111111111111117:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_49),maxMod(X_T_49)~=a.
+type(M) ~ finite([0.06381226842321941:c,0.9361877315767803:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_50),maxMod(X_T_50)~=b.
+type(M) ~ finite([0.2858439201451905:c,0.7141560798548094:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_51),maxMod(X_T_51)~=c.
+type(M) ~ finite([0.2632809889742732:c,0.7367190110257267:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_52),maxMod(X_T_52)~=d.
+type(M) ~ finite([0.4531138153185395:c,0.5468861846814597:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_53),maxMod(X_T_53)~=e.
+type(M) ~ finite([0.629073671736125:c,0.3709263282638752:b]) := findall_forward(Du_M,(rel13(A_M,M),dur(A_M)~=Du_M),X_T_13),\+minMod(X_T_13)~=_,findall_forward(Zt_M,(rel12(In_M,M),ztt(In_M)~=Zt_M),X_T_54),maxMod(X_T_54)~=f.
+

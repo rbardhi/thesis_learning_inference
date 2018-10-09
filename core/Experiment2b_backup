@@ -1,0 +1,392 @@
+2018-10-08 14:55:39,037 INFO     
+ ********* Fold Number : 1
+2018-10-08 14:55:39,410 INFO     
+Percentage Missing = 90
+2018-10-08 15:10:17,152 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 15:10:17,152 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:10:17,152 INFO     WRMSE = 0.244343, Number of tests consider = 81
+2018-10-08 15:10:27,216 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 15:10:27,217 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:10:27,217 INFO     WRMSE = 0.223834, Number of tests consider = 81
+2018-10-08 15:10:36,683 INFO     
+
+
+Runs over missing values
+2018-10-08 15:10:36,683 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:10:36,684 INFO     WRMSE = 0.233270, Number of tests consider = 81
+2018-10-08 15:10:47,746 INFO     
+
+
+Runs over complete data
+2018-10-08 15:10:47,747 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:10:47,747 INFO     WRMSE = 0.160743, Number of tests consider = 81
+2018-10-08 15:10:48,141 INFO     
+Percentage Missing = 80
+2018-10-08 15:34:43,769 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 15:34:43,769 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:34:43,769 INFO     WRMSE = 0.166797, Number of tests consider = 81
+2018-10-08 15:34:54,421 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 15:34:54,421 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:34:54,421 INFO     WRMSE = 0.224442, Number of tests consider = 81
+2018-10-08 15:35:04,521 INFO     
+
+
+Runs over missing values
+2018-10-08 15:35:04,521 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:35:04,521 INFO     WRMSE = 0.235227, Number of tests consider = 81
+2018-10-08 15:35:15,665 INFO     
+
+
+Runs over complete data
+2018-10-08 15:35:15,665 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:35:15,665 INFO     WRMSE = 0.161974, Number of tests consider = 81
+2018-10-08 15:35:16,058 INFO     
+Percentage Missing = 70
+2018-10-08 15:50:57,360 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 15:50:57,360 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:50:57,360 INFO     WRMSE = 0.170134, Number of tests consider = 81
+2018-10-08 15:51:08,350 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 15:51:08,351 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:51:08,351 INFO     WRMSE = 0.239656, Number of tests consider = 81
+2018-10-08 15:51:20,938 INFO     
+
+
+Runs over missing values
+2018-10-08 15:51:20,938 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:51:20,938 INFO     WRMSE = 0.232935, Number of tests consider = 81
+2018-10-08 15:51:33,796 INFO     
+
+
+Runs over complete data
+2018-10-08 15:51:33,796 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 15:51:33,796 INFO     WRMSE = 0.163342, Number of tests consider = 81
+2018-10-08 15:51:34,284 INFO     
+Percentage Missing = 60
+2018-10-08 16:06:51,142 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 16:06:51,143 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:06:51,143 INFO     WRMSE = 0.171057, Number of tests consider = 81
+2018-10-08 16:07:01,700 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 16:07:01,701 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:07:01,701 INFO     WRMSE = 0.189001, Number of tests consider = 81
+2018-10-08 16:07:13,820 INFO     
+
+
+Runs over missing values
+2018-10-08 16:07:13,820 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:07:13,820 INFO     WRMSE = 0.232840, Number of tests consider = 81
+2018-10-08 16:07:25,406 INFO     
+
+
+Runs over complete data
+2018-10-08 16:07:25,406 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:07:25,406 INFO     WRMSE = 0.161071, Number of tests consider = 81
+2018-10-08 16:07:25,934 INFO     
+Percentage Missing = 50
+2018-10-08 16:22:13,292 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 16:22:13,292 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:22:13,292 INFO     WRMSE = 0.169876, Number of tests consider = 81
+2018-10-08 16:22:23,720 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 16:22:23,720 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:22:23,720 INFO     WRMSE = 0.190954, Number of tests consider = 81
+2018-10-08 16:22:35,919 INFO     
+
+
+Runs over missing values
+2018-10-08 16:22:35,919 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:22:35,920 INFO     WRMSE = 0.225473, Number of tests consider = 81
+2018-10-08 16:22:47,184 INFO     
+
+
+Runs over complete data
+2018-10-08 16:22:47,184 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:22:47,184 INFO     WRMSE = 0.161146, Number of tests consider = 81
+2018-10-08 16:22:47,601 INFO     
+Percentage Missing = 40
+2018-10-08 16:35:18,530 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 16:35:18,530 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:35:18,530 INFO     WRMSE = 0.170613, Number of tests consider = 81
+2018-10-08 16:35:31,216 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 16:35:31,216 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:35:31,216 INFO     WRMSE = 0.184234, Number of tests consider = 81
+2018-10-08 16:35:43,844 INFO     
+
+
+Runs over missing values
+2018-10-08 16:35:43,844 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:35:43,844 INFO     WRMSE = 0.220935, Number of tests consider = 80
+2018-10-08 16:35:55,570 INFO     
+
+
+Runs over complete data
+2018-10-08 16:35:55,570 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:35:55,570 INFO     WRMSE = 0.163133, Number of tests consider = 81
+2018-10-08 16:35:55,988 INFO     
+Percentage Missing = 30
+2018-10-08 16:47:51,840 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 16:47:51,840 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:47:51,841 INFO     WRMSE = 0.168483, Number of tests consider = 81
+2018-10-08 16:48:02,627 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 16:48:02,628 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:48:02,628 INFO     WRMSE = 0.180238, Number of tests consider = 81
+2018-10-08 16:48:13,995 INFO     
+
+
+Runs over missing values
+2018-10-08 16:48:13,995 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:48:13,995 INFO     WRMSE = 0.173869, Number of tests consider = 81
+2018-10-08 16:48:26,009 INFO     
+
+
+Runs over complete data
+2018-10-08 16:48:26,009 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:48:26,009 INFO     WRMSE = 0.161574, Number of tests consider = 81
+2018-10-08 16:48:26,502 INFO     
+Percentage Missing = 20
+2018-10-08 16:57:58,073 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 16:57:58,073 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:57:58,073 INFO     WRMSE = 0.166054, Number of tests consider = 81
+2018-10-08 16:58:08,781 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 16:58:08,781 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:58:08,781 INFO     WRMSE = 0.176221, Number of tests consider = 81
+2018-10-08 16:58:22,417 INFO     
+
+
+Runs over missing values
+2018-10-08 16:58:22,417 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:58:22,418 INFO     WRMSE = 0.203845, Number of tests consider = 81
+2018-10-08 16:58:34,479 INFO     
+
+
+Runs over complete data
+2018-10-08 16:58:34,479 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 16:58:34,479 INFO     WRMSE = 0.161512, Number of tests consider = 81
+2018-10-08 16:58:34,480 INFO     
+ ********* Fold Number : 2
+2018-10-08 16:58:34,993 INFO     
+Percentage Missing = 90
+2018-10-08 17:09:14,321 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 17:09:14,321 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:09:14,322 INFO     WRMSE = 0.211588, Number of tests consider = 72
+2018-10-08 17:09:23,990 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 17:09:23,990 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:09:23,990 INFO     WRMSE = 0.208838, Number of tests consider = 72
+2018-10-08 17:09:34,357 INFO     
+
+
+Runs over missing values
+2018-10-08 17:09:34,357 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:09:34,357 INFO     WRMSE = 0.211339, Number of tests consider = 72
+2018-10-08 17:09:46,941 INFO     
+
+
+Runs over complete data
+2018-10-08 17:09:46,942 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:09:46,942 INFO     WRMSE = 0.121942, Number of tests consider = 72
+2018-10-08 17:09:47,479 INFO     
+Percentage Missing = 80
+2018-10-08 17:25:53,849 INFO     
+
+
+Runs over probability distribution of missing values
+2018-10-08 17:25:53,849 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:25:53,849 INFO     WRMSE = 0.138548, Number of tests consider = 72
+2018-10-08 17:26:03,632 INFO     
+
+
+Runs over mode of distribution of missing values
+2018-10-08 17:26:03,633 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:26:03,633 INFO     WRMSE = 0.210394, Number of tests consider = 72
+2018-10-08 17:26:14,134 INFO     
+
+
+Runs over missing values
+2018-10-08 17:26:14,134 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:26:14,134 INFO     WRMSE = 0.211219, Number of tests consider = 72
+2018-10-08 17:26:25,303 INFO     
+
+
+Runs over complete data
+2018-10-08 17:26:25,304 INFO     
+ 
+ 
+$$$$$$$$$$ Results for monthlyPayments $$$$$$$$$$
+2018-10-08 17:26:25,312 INFO     WRMSE = 0.120847, Number of tests consider = 72
+2018-10-08 17:26:25,793 INFO     
+Percentage Missing = 70
+2018-10-08 17:36:15,593 INFO     
+ ********* Fold Number : 3
+2018-10-08 17:49:36,198 INFO     
+ ********* Fold Number : 4
+2018-10-08 18:02:56,724 INFO     
+ ********* Fold Number : 5
