@@ -14,4 +14,4 @@ Installation
 Execution 
 =========
 
-$ python TreeLearnerProbabilistic.py
+$ python core/TreeLearnerProbabilistic.py
