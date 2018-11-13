@@ -1,9 +1,0 @@
-grade(C,S) ~ finite([0.6:a,0.13333333333333333:c,0.26666666666666666:b]) := maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_7),X_T_7==mid,diff(C)~=D_M,D_M==low.
-grade(C,S) ~ finite([0.14285714285714285:a,0.8571428571428571:b]) := maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_7),X_T_7==mid,diff(C)~=D_M,D_M==high.
-grade(C,S) ~ finite([0.5333333333333333:a,0.2:c,0.26666666666666666:b]) := maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_8),X_T_8==high,diff(C)~=D_M,D_M==low.
-grade(C,S) ~ finite([0.3333333333333333:c,0.6111111111111112:b,0.05555555555555555:d]) := maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_8),X_T_8==high,diff(C)~=D_M,D_M==high.
-grade(C,S) ~ finite([0.125:c,0.25:b,0.625:d]) := \+maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_9),\+maxMod(X2_M,salary(P_M_1,S)~=X2_M,X_T_46),\+maxMod(X4_M,(ra(P_M_2,S),popularity(P_M_2)~=X4_M),X_T_54),rating(C)~=R_M,R_M==low.
-grade(C,S) ~ finite([0.6:a,0.13333333333333333:c,0.26666666666666666:d]) := \+maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_9),\+maxMod(X2_M,salary(P_M_1,S)~=X2_M,X_T_46),\+maxMod(X4_M,(ra(P_M_2,S),popularity(P_M_2)~=X4_M),X_T_54),rating(C)~=R_M,R_M==high,diff(C)~=D_M,D_M==low.
-grade(C,S) ~ finite([0.35714285714285715:a,0.2857142857142857:c,0.14285714285714285:b,0.21428571428571427:d]) := \+maxMod(T_M,(ra(P_M,S),teachingability(P_M)~=T_M),X_T_9),\+maxMod(X2_M,salary(P_M_1,S)~=X2_M,X_T_46),\+maxMod(X4_M,(ra(P_M_2,S),popularity(P_M_2)~=X4_M),X_T_54),rating(C)~=R_M,R_M==high,diff(C)~=D_M,D_M==high.
-grade(C,S) ~ finite([0.34782608695652173:a,0.1956521739130435:c,0.31521739130434784:b,0.14130434782608695:d]) := true.
-rating(C) ~ finite([0.7:high,0.3:low]) := true.
