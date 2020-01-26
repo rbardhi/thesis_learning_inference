@@ -1,0 +1,17 @@
+displX(W,Id) ~ gaussian(0.0,0.0) := atleastOne(W,Id)~=Sh_M,Sh_M==square,shape(W,Id)~=Sh_M_1,Sh_M_1==square.
+displX(W,Id) ~ gaussian(Mean,1.3104056180366717) := atleastOne(W,Id)~=Sh_M,Sh_M==square,shape(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,avglshpos(W,Id,Sh_M_1)~=X_M_1,getMean([X_M,X_M_1],[-0.24489449455481815,0.03402063186627456,-0.7869349934462465],Mean).
+displX(W,Id) ~ gaussian(Mean,1.4647110768971223) := atleastOne(W,Id)~=Sh_M,Sh_M==square,shape(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,\+avglshpos(W,Id,Sh_M_1)~=X_M_1,getMean([X_M],[-0.3255688406949068,-0.09384995635862214],Mean).
+displX(W,Id) ~ gaussian(Mean,1.1205192054273114) := atleastOne(W,Id)~=Sh_M,Sh_M==square,shape(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,avglshpos(W,Id,Sh_M)~=X_M_1,getMean([X_M,X_M_1],[-0.3873084132043127,0.10123101266435755,-0.5499344328564315],Mean).
+displX(W,Id) ~ gaussian(0.0,0.0) := atleastOne(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id)~=Sh_M_1,Sh_M_1==square.
+displX(W,Id) ~ gaussian(Mean,1.0620003586262443) := atleastOne(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,avglshpos(W,Id,Sh_M)~=X_M_1,getMean([X_M,X_M_1],[-0.281615822981189,0.0635371410600601,-0.030223641095217024],Mean).
+displX(W,Id) ~ gaussian(Mean,0.8554805216692437) := atleastOne(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,avglshpos(W,Id,Sh_M_1)~=X_M_1,getMean([X_M,X_M_1],[-0.30659529013839615,-0.07004084263395653,-0.5121191618215208],Mean).
+displX(W,Id) ~ gaussian(Mean,0.987966688999836) := atleastOne(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,\+avglshpos(W,Id,Sh_M_1)~=X_M_1,getMean([X_M],[-0.31301424415623613,-0.3790563276692802],Mean).
+displX(W,Id) ~ gaussian(0.0,0.0) := atleastOne(W,Id)~=Sh_M,Sh_M==circle,shape(W,Id)~=Sh_M_1,Sh_M_1==square.
+displX(W,Id) ~ gaussian(Mean,0.49016629751788804) := atleastOne(W,Id)~=Sh_M,Sh_M==circle,shape(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,avglshpos(W,Id,Sh_M)~=X_M_1,getMean([X_M,X_M_1],[-0.23156571750464064,0.14096181188872398,0.14696492981703974],Mean).
+displX(W,Id) ~ gaussian(Mean,0.8328253185515234) := atleastOne(W,Id)~=Sh_M,Sh_M==circle,shape(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,getMean([X_M],[-0.44307791307989886,0.18116065475791499],Mean).
+displX(W,Id) ~ gaussian(0.0,0.0) := \+atleastOne(W,Id)~=Sh_M.
+displX(W,Id) ~ gaussian(-0.455740643513,0.804555210051) := true.
+posX_t1(W,Id) ~ gaussian(Mean,0.4264421749826073) := posX_t0(W,Id)~=X_M,displX(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.6052455262512104,0.7818484014517182,0.9666237716991002],Mean).
+posX_t1(W,Id) ~ gaussian(2.24585788687,1.23783470091) := true.
+posY_t1(W,Id) ~ gaussian(Mean,0.5016342446658699) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.7208310245073306,0.6980830851299056],Mean).
+posY_t1(W,Id) ~ gaussian(2.49764748099,1.80412744628) := true.

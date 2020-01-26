@@ -1,0 +1,16 @@
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==sphere.
+left_of_t1(W,I,I1) ~ finite([0.7451539338654503:true,0.25484606613454974:false]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==right,shape(W,I1)~=Sh_M,Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([0.06620780072107507:true,0.9337921992789251:false]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==right,shape(W,I1)~=Sh_M,Sh_M==sphere.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==right,shape(W,I1)~=Sh_M,Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([0.19381931732529342:true,0.8061806826747066:false]) := \+move_rel_of_t0(W,I1,I,Dir_M),left_of_t0(W,I1,I)~=B_M,B_M==true.
+left_of_t1(W,I,I1) ~ finite([0.44382574516868656:false,0.5561742548313134:true]) := \+move_rel_of_t0(W,I1,I,Dir_M),left_of_t0(W,I1,I)~=B_M,B_M==false,right_of_t0(W,I1,I)~=B_M_1,B_M_1==true.
+left_of_t1(W,I,I1) ~ finite([0.49061032863849763:true,0.5093896713615024:false]) := true.
+right_of_t1(W,I,I1) ~ finite([0.2487776819096923:false,0.751222318090308:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cube.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==sphere.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cylinder.
+right_of_t1(W,I,I1) ~ finite([0.03366428793049953:true,0.9663357120695003:false]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==right.
+right_of_t1(W,I,I1) ~ finite([0.193756727664155:true,0.806243272335845:false]) := \+move_rel_of_t0(W,I,I1,Dir_M),right_of_t0(W,I1,I)~=B_M,B_M==true.
+right_of_t1(W,I,I1) ~ finite([0.44721919302071994:false,0.5527808069792803:true]) := \+move_rel_of_t0(W,I,I1,Dir_M),right_of_t0(W,I1,I)~=B_M,B_M==false,left_of_t0(W,I1,I)~=B_M_1,B_M_1==true.
+right_of_t1(W,I,I1) ~ finite([0.5093896713615024:false,0.49061032863849763:true]) := true.

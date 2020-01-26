@@ -1,0 +1,16 @@
+move_left_of(W,Id,Id1) ~ finite([1.0:false]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==square,shape(W,Id1)~=Sh_M_1,Sh_M_1==square.
+move_left_of(W,Id,Id1) ~ finite([0.47756729810568294:false,0.522432701894317:true]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==square,shape(W,Id1)~=Sh_M_1,Sh_M_1==triangle.
+move_left_of(W,Id,Id1) ~ finite([0.3464268812115476:false,0.6535731187884525:true]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==square,shape(W,Id1)~=Sh_M_1,Sh_M_1==circle.
+move_left_of(W,Id,Id1) ~ finite([1.0:false]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id1)~=Sh_M_1,Sh_M_1==square.
+move_left_of(W,Id,Id1) ~ finite([1.0:false]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id1)~=Sh_M_1,Sh_M_1==triangle.
+move_left_of(W,Id,Id1) ~ finite([0.48295454545454547:false,0.5170454545454546:true]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==triangle,shape(W,Id1)~=Sh_M_1,Sh_M_1==circle.
+move_left_of(W,Id,Id1) ~ finite([1.0:false]) := left_of(W,Id1,Id)~=B_M,B_M==true,shape(W,Id)~=Sh_M,Sh_M==circle.
+move_left_of(W,Id,Id1) ~ finite([1.0:false]) := left_of(W,Id1,Id)~=B_M,B_M==false.
+move_left_of(W,Id,Id1) ~ finite([0.056840429966274676:true,0.9431595700337253:false]) := true.
+displX(W,Id) ~ gaussian(Mean,0.05675319793642352) := almove_left_of(W,Id)~=X_M,posX_t0(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.9863427606153218,-1.0184922264195777,-0.765534283947261],Mean).
+displX(W,Id) ~ gaussian(0.0,0.0) := \+almove_left_of(W,Id)~=X_M.
+displX(W,Id) ~ gaussian(-0.453895160649,0.798323552303) := true.
+posX_t1(W,Id) ~ gaussian(Mean,5.816899447345681e-18) := posX_t0(W,Id)~=X_M,displX(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.999999999993155,0.9999999999938207,1.8971491044794675e-11],Mean).
+posX_t1(W,Id) ~ gaussian(2.25161984255,1.24312073709) := true.
+posY_t1(W,Id) ~ gaussian(Mean,4.390713969743445e-30) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.9999999999999984,3.9968028886505635e-15],Mean).
+posY_t1(W,Id) ~ gaussian(2.49385177343,1.80639670146) := true.

@@ -1,0 +1,9 @@
+displX(W,Id) ~ gaussian(0.0,0.0) := heavy(W,Id)~=B_M,B_M==true.
+displX(W,Id) ~ gaussian(Mean,0.0) := heavy(W,Id)~=B_M,B_M==false,posX_t0(W,Id)~=X_M,shape(W,Id)~=Sh_M,Sh_M==square,\+ratleastOne(W,Id)~=Sh_M_1,getMean([X_M],[0.0,0.0],Mean).
+displX(W,Id) ~ gaussian(Mean,1.0248352415867081) := heavy(W,Id)~=B_M,B_M==false,posX_t0(W,Id)~=X_M,shape(W,Id)~=Sh_M,Sh_M==triangle,\+ratleastOne(W,Id)~=Sh_M_1,getMean([X_M],[-0.4629062261597209,0.6268803942158278],Mean).
+displX(W,Id) ~ gaussian(Mean,0.7564287477064039) := heavy(W,Id)~=B_M,B_M==false,posX_t0(W,Id)~=X_M,shape(W,Id)~=Sh_M,Sh_M==circle,\+ratleastOne(W,Id)~=Sh_M_1,getMean([X_M],[-0.6366332352199617,0.561377092392711],Mean).
+displX(W,Id) ~ gaussian(-0.190497256674,1.02060157158) := true.
+posX_t1(W,Id) ~ gaussian(Mean,0.09160135448103028) := posX_t0(W,Id)~=X_M,displX(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.9173125792278753,0.9580014423507361,0.20486771736726084],Mean).
+posX_t1(W,Id) ~ gaussian(2.37801396285,1.3478217224) := true.
+posY_t1(W,Id) ~ gaussian(Mean,0.09432568617437113) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.9476144385334324,0.13086658803420237],Mean).
+posY_t1(W,Id) ~ gaussian(2.50268902054,1.79954644097) := true.

@@ -1,0 +1,10 @@
+posX_t1(W,I) ~ gaussian(Mean,2.2642060576089937e-30) := posX_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==left,good_cube(W,I)~=B_M,B_M==false,goal(W)~=B_M_1,B_M_1==false,good_sphere(W,I)~=B_M_2,B_M_2==true,\+left_of_t0(W,I_M,I),getMean([X_M],[0.8673056646404785,-0.5401169315479566],Mean).
+posX_t1(W,I) ~ gaussian(Mean,0.0025590207938443366) := posX_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==left,good_cube(W,I)~=B_M,B_M==false,goal(W)~=B_M_1,B_M_1==false,good_sphere(W,I)~=B_M_2,B_M_2==false,getMean([X_M],[0.9926081358383473,-0.6553328308530695],Mean).
+posX_t1(W,I) ~ gaussian(Mean,0.005984388468864066) := posX_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==right,goal(W)~=B_M,B_M==false,getMean([X_M],[0.9947648020725234,0.7042301033360826],Mean).
+posX_t1(W,I) ~ gaussian(Mean,4.51594555534227e-28) := posX_t0(W,I)~=X_M,\+move_t0(W,I,Dir_M),goal(W)~=B_M,B_M==false,getMean([X_M],[1.0000000000000073,1.582067810090848e-15],Mean).
+posX_t1(W,I) ~ gaussian(-0.259468512283,8.72815970663) := true.
+posY_t1(W,I) ~ gaussian(Mean,2.4252739670117965e-29) := posY_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==left,good_cube(W,I)~=B_M,B_M==false,goal(W)~=B_M_1,B_M_1==false,good_sphere(W,I)~=B_M_2,B_M_2==true,\+left_of_t0(W,I_M,I),getMean([X_M],[0.8673056646404572,-0.16063481066241625],Mean).
+posY_t1(W,I) ~ gaussian(Mean,0.002573824412161722) := posY_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==left,good_cube(W,I)~=B_M,B_M==false,goal(W)~=B_M_1,B_M_1==false,good_sphere(W,I)~=B_M_2,B_M_2==false,getMean([X_M],[0.9959023209441021,-0.6923359378688527],Mean).
+posY_t1(W,I) ~ gaussian(Mean,0.005920308560195584) := posY_t0(W,I)~=X_M,move_t0(W,I,Dir_M),Dir_M==right,goal(W)~=B_M,B_M==false,getMean([X_M],[1.007414461803342,0.7180442905066515],Mean).
+posY_t1(W,I) ~ gaussian(Mean,1.1920894355067266e-28) := posY_t0(W,I)~=X_M,\+move_t0(W,I,Dir_M),goal(W)~=B_M,B_M==false,getMean([X_M],[1.0000000000000029,2.3314683517128287e-15],Mean).
+posY_t1(W,I) ~ gaussian(-0.825838601911,12.1282129778) := true.

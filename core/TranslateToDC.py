@@ -18,7 +18,8 @@ class TranslateToDC(object):
         while True:
             start = a_str.find(sub, start)
             if start == -1: return
-            yield start
+            if start == 0 or a_str[start-1] == "," or a_str[start-1] == '+' or a_str[start-1] == "(":
+                yield start
             start += len(sub)
             
 #     def find_all(self, a_str, sub):

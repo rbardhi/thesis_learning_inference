@@ -1,0 +1,102 @@
+with open("worlds_dc_rules.pl","r") as f:
+  rules = f.read()
+
+#first  
+rules = rules.replace(":=","<-")
+rules = rules.replace("(W,","(")
+rules = rules.replace("(W)","")
+
+#move
+rules = rules.replace("move_rel_of_t0(I,I1,Dir_M),Dir_M==left","move_rel_of(I,I1,left):t")
+rules = rules.replace("move_rel_of_t0(I1,I,Dir_M),Dir_M==left","move_rel_of(I1,I,left):t")
+rules = rules.replace("move_rel_of_t0(I,I1,Dir_M),Dir_M==right","move_rel_of(I,I1,right):t")
+rules = rules.replace("move_rel_of_t0(I1,I,Dir_M),Dir_M==right","move_rel_of(I1,I,right):t")
+rules = rules.replace("\+move_rel_of_t0(I,I1,Dir_M)","\+move_rel_of(I,I1,_):t")
+rules = rules.replace("\+move_rel_of_t0(I1,I,Dir_M)","\+move_rel_of(I1,I,_):t")
+
+#good_cube
+rules = rules.replace("good_cube(I)~=B_M,B_M==false","\+good_cube(I):t")
+rules = rules.replace("good_cube(I)~=B_M,B_M==true","good_cube(I):t")
+rules = rules.replace("good_cube(I)~=B_M_1,B_M_1==false","\+good_cube(I):t")
+rules = rules.replace("good_cube(I)~=B_M_1,B_M_1==true","good_cube(I):t")
+rules = rules.replace("good_cube(I)~=B_M_2,B_M_2==false","\+good_cube(I):t")
+rules = rules.replace("good_cube(I)~=B_M_2,B_M_2==true","good_cube(I):t")
+rules = rules.replace("good_cube(I1)~=B_M,B_M==false","\+good_cube(I1):t")
+rules = rules.replace("good_cube(I1)~=B_M,B_M==true","good_cube(I1):t")
+rules = rules.replace("good_cube(I1)~=B_M_1,B_M_1==false","\+good_cube(I1):t")
+rules = rules.replace("good_cube(I1)~=B_M_1,B_M_1==true","good_cube(I1):t")
+rules = rules.replace("good_cube(I1)~=B_M_2,B_M_2==false","\+good_cube(I1):t")
+rules = rules.replace("good_cube(I1)~=B_M_2,B_M_2==true","good_cube(I1):t")
+
+#good_sphere
+rules = rules.replace("good_sphere(I)~=B_M,B_M==false","\+good_sphere(I):t")
+rules = rules.replace("good_sphere(I)~=B_M,B_M==true","good_sphere(I):t")
+rules = rules.replace("good_sphere(I)~=B_M_1,B_M_1==false","\+good_sphere(I):t")
+rules = rules.replace("good_sphere(I)~=B_M_1,B_M_1==true","good_sphere(I):t")
+rules = rules.replace("good_sphere(I)~=B_M_2,B_M_2==false","\+good_sphere(I):t")
+rules = rules.replace("good_sphere(I)~=B_M_2,B_M_2==true","good_sphere(I):t")
+rules = rules.replace("good_sphere(I1)~=B_M,B_M==false","\+good_sphere(I1):t")
+rules = rules.replace("good_sphere(I1)~=B_M,B_M==true","good_sphere(I1):t")
+rules = rules.replace("good_sphere(I1)~=B_M_1,B_M_1==false","\+good_sphere(I1):t")
+rules = rules.replace("good_sphere(I1)~=B_M_1,B_M_1==true","good_sphere(I1):t")
+rules = rules.replace("good_sphere(I1)~=B_M_2,B_M_2==false","\+good_sphere(I1):t")
+rules = rules.replace("good_sphere(I1)~=B_M_2,B_M_2==true","good_sphere(I1):t")
+#goal
+rules = rules.replace("goal~=B_M,B_M==false","\+goal:t")
+rules = rules.replace("goal~=B_M,B_M==true","goal:t")
+rules = rules.replace("goal~=B_M_1,B_M_1==false","\+goal:t")
+rules = rules.replace("goal~=B_M_1,B_M_1==true","goal:t")
+rules = rules.replace("goal~=B_M_2,B_M_2==false","\+goal:t")
+rules = rules.replace("goal~=B_M_2,B_M_2==true","goal:t")
+
+#shape
+rules = rules.replace("shape(I)~=Sh_M,Sh_M==cube","shape(I,cube)")
+rules = rules.replace("shape(I)~=Sh_M,Sh_M==sphere","shape(I,sphere)")
+rules = rules.replace("shape(I)~=Sh_M,Sh_M==cylinder","shape(I,cylinder)")
+rules = rules.replace("shape(I)~=Sh_M_1,Sh_M==cube","shape(I,cube)")
+rules = rules.replace("shape(I)~=Sh_M_1,Sh_M==sphere","shape(I,sphere)")
+rules = rules.replace("shape(I)~=Sh_M_1,Sh_M==cylinder","shape(I,cylinder)")
+rules = rules.replace("shape(I1)~=Sh_M,Sh_M==cube","shape(I1,cube)")
+rules = rules.replace("shape(I1)~=Sh_M,Sh_M==sphere","shape(I1,sphere)")
+rules = rules.replace("shape(I1)~=Sh_M,Sh_M==cylinder","shape(I1,cylinder)")
+rules = rules.replace("shape(I1)~=Sh_M_1,Sh_M==cube","shape(I1,cube)")
+rules = rules.replace("shape(I1)~=Sh_M_1,Sh_M==sphere","shape(I1,sphere)")
+rules = rules.replace("shape(I1)~=Sh_M_1,Sh_M==cylinder","shape(I1,cylinder)")
+
+rules = rules.replace("shape(I,Sh_M),Sh_M==cube","shape(I,cube)")
+rules = rules.replace("shape(I,Sh_M),Sh_M==sphere","shape(I,sphere)")
+rules = rules.replace("shape(I,Sh_M),Sh_M==cylinder","shape(I,cylinder)")
+rules = rules.replace("shape(I,Sh_M_1),Sh_M==cube","shape(I,cube)")
+rules = rules.replace("shape(I,Sh_M_1),Sh_M==sphere","shape(I,sphere)")
+rules = rules.replace("shape(I,Sh_M_1),Sh_M==cylinder","shape(I,cylinder)")
+rules = rules.replace("shape(I1,Sh_M),Sh_M==cube","shape(I1,cube)")
+rules = rules.replace("shape(I1,Sh_M),Sh_M==sphere","shape(I1,sphere)")
+rules = rules.replace("shape(I1,Sh_M),Sh_M==cylinder","shape(I1,cylinder)")
+rules = rules.replace("shape(I1,Sh_M_1),Sh_M==cube","shape(I1,cube)")
+rules = rules.replace("shape(I1,Sh_M_1),Sh_M==sphere","shape(I1,sphere)")
+rules = rules.replace("shape(I1,Sh_M_1),Sh_M==cylinder","shape(I1,cylinder)")
+
+#relations
+rules = rules.replace("left_of_t0(I,I1)~=B_M,B_M==true","left_of(I,I1):t~=true")
+rules = rules.replace("left_of_t0(I1,I)~=B_M,B_M==true","left_of(I1,I):t~=true")
+rules = rules.replace("left_of_t0(I,I1)~=B_M,B_M==false","left_of(I,I1):t~=false")
+rules = rules.replace("left_of_t0(I1,I)~=B_M,B_M==false","left_of(I1,I):t~=false")
+rules = rules.replace("left_of_t0(I,I1)~=B_M_1,B_M_1==true","left_of(I,I1):t~=true")
+rules = rules.replace("left_of_t0(I1,I)~=B_M_1,B_M_1==true","left_of(I1,I):t~=true")
+rules = rules.replace("left_of_t0(I,I1)~=B_M_1,B_M_1==false","left_of(I,I1):t~=false")
+rules = rules.replace("left_of_t0(I1,I)~=B_M_1,B_M_1==false","left_of(I1,I):t~=false")
+
+rules = rules.replace("right_of_t0(I,I1)~=B_M,B_M==true","right_of(I,I1):t~=true")
+rules = rules.replace("right_of_t0(I1,I)~=B_M,B_M==true","right_of(I1,I):t~=true")
+rules = rules.replace("right_of_t0(I,I1)~=B_M,B_M==false","right_of(I,I1):t~=false")
+rules = rules.replace("right_of_t0(I1,I)~=B_M,B_M==false","right_of(I1,I):t~=false")
+rules = rules.replace("right_of_t0(I,I1)~=B_M_1,B_M_1==true","right_of(I,I1):t~=true")
+rules = rules.replace("right_of_t0(I1,I)~=B_M_1,B_M_1==true","right_of(I1,I):t~=true")
+rules = rules.replace("right_of_t0(I,I1)~=B_M_1,B_M_1==false","right_of(I,I1):t~=false")
+rules = rules.replace("right_of_t0(I1,I)~=B_M_1,B_M_1==false","right_of(I1,I):t~=false")
+
+rules = rules.replace("left_of_t1(I,I1)","left_of(I,I1):t+1")
+rules = rules.replace("right_of_t1(I,I1)","right_of(I,I1):t+1")
+
+with open("reformed.pl","w") as f:
+  f.write(rules)

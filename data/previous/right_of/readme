@@ -1,0 +1,6 @@
+worlds_facts(copy) has move_right
+worlds_facts has move_t0 with dir as arg
+at folder some rules that capture a relation but no action.
+At moment there are 49 example with 11 worlds.
+
+Need more examples

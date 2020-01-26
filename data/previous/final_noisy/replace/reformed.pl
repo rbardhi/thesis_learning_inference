@@ -1,0 +1,14 @@
+posX(I):t+1 ~ gaussian(Mean,1.6843218301344384e-27) <- posX(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,move(I,right):t,getMean([X_M],[0.9999999999999737,2.142730437526552e-14],Mean).
+posX(I):t+1 ~ gaussian(Mean,9.620884345948302e-28) <- posX(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,\+move(I,_):t,shape(I,sphere),getMean([X_M],[0.9999999999999859,-1.6431300764452317e-14],Mean).
+posX(I):t+1 ~ gaussian(Mean,6.271884396119707e-28) <- posX(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,\+move(I,_):t,sphere(I,cylinder),getMean([X_M],[1.0000000000000115,3.497202527569243e-15],Mean).
+posX(I):t+1 ~ gaussian(Mean,5.533113669700082e-30) <- posX(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,good_sphere(I):t,\+left_of(I_M,I):t,getMean([X_M],[0.8673056646404672,-0.5401169315479448],Mean).
+posX(I):t+1 ~ gaussian(Mean,2.0603928032495315e-05) <- posX(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,\+good_sphere(I):t,shape(I,sphere),getMean([X_M],[0.9810300614783736,-0.6518542587368296],Mean).
+posX(I):t+1 ~ gaussian(Mean,0.0015789679230616132) <- posX(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,\+good_sphere(I):t,sphere(I,cylinder),getMean([X_M],[1.0288412811797532,-0.723497753424626],Mean).
+posX(I):t+1 ~ gaussian(-0.155315602203,8.19528212856) <- true.
+posY(I):t+1 ~ gaussian(Mean,9.079050225212562e-27) <- posY(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,move(I,right):t,getMean([X_M],[1.0000000000000235,5.728750807065808e-14],Mean).
+posY(I):t+1 ~ gaussian(Mean,1.9346813700544933e-28) <- posY(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,\+move(I,_):t,shape(I,sphere),getMean([X_M],[1.0000000000000047,1.3766765505351941e-14],Mean).
+posY(I):t+1 ~ gaussian(Mean,2.5216511557115555e-26) <- posY(I):t~=X_M,good_cube(I):t,\+goal:t,\+good_sphere(I):t,\+move(I,_):t,sphere(I,cylinder),getMean([X_M],[1.0000000000000442,1.0075273948473296e-14],Mean).
+posY(I):t+1 ~ gaussian(Mean,1.1038552646860198e-29) <- posY(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,good_sphere(I):t,\+left_of(I_M,I):t,getMean([X_M],[0.8673056646404602,-0.16063481066242558],Mean).
+posY(I):t+1 ~ gaussian(Mean,0.0007738082740215832) <- posY(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,\+good_sphere(I):t,shape(I,sphere),getMean([X_M],[1.0069399815400588,-0.6693132059809266],Mean).
+posY(I):t+1 ~ gaussian(Mean,0.002570015085157105) <- posY(I):t~=X_M,\+good_cube(I):t,move(I,left):t,\+goal:t,\+good_sphere(I):t,sphere(I,cylinder),getMean([X_M],[0.9841342705060875,-0.7136099319246731],Mean).
+posY(I):t+1 ~ gaussian(-0.148248651016,11.0885573715) <- true.

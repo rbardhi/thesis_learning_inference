@@ -1,0 +1,14 @@
+displ(W,Id) ~ gaussian(0.0,0.0) := shape(W,Id)~=Sh_M,Sh_M==square.
+displ(W,Id) ~ gaussian(Mean,0.7870045079687032) := shape(W,Id)~=Sh_M,Sh_M==triangle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==square,posX_t0(W,Id)~=X_M,all_combined(W,Id)~=X_M_1,getMean([X_M,X_M_1],[-0.9622906560685386,0.8228704298425111,-0.17594378335668281],Mean).
+displ(W,Id) ~ gaussian(Mean,1.190907686995511) := shape(W,Id)~=Sh_M,Sh_M==triangle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,all_combined(W,Id)~=X_M_1,getMean([X_M,X_M_1],[-0.5644817794466879,0.35668503701345644,0.19337416677849095],Mean).
+displ(W,Id) ~ gaussian(Mean,0.4678255075342121) := shape(W,Id)~=Sh_M,Sh_M==triangle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,all_combined(W,Id)~=X_M_1,getMean([X_M,X_M_1],[-0.5887986521946466,0.41742418882125004,0.6804749447655951],Mean).
+displ(W,Id) ~ gaussian(0.0,0.0) := shape(W,Id)~=Sh_M,Sh_M==triangle,\+mmshl(W,Id)~=Sh_M_1.
+displ(W,Id) ~ gaussian(Mean,0.4349894197430647) := shape(W,Id)~=Sh_M,Sh_M==circle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==square,posX_t0(W,Id)~=X_M,all_combined(W,Id)~=X_M_1,getMean([X_M,X_M_1],[-1.114449666294404,0.9448468138900045,-0.192177091803315],Mean).
+displ(W,Id) ~ gaussian(Mean,0.5193360192945513) := shape(W,Id)~=Sh_M,Sh_M==circle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==triangle,posX_t0(W,Id)~=X_M,all_combined(W,Id)~=X_M_1,getMean([X_M,X_M_1],[-0.8489592603821364,0.6975033697349637,-0.4246750917588664],Mean).
+displ(W,Id) ~ gaussian(Mean,0.5180305798996994) := shape(W,Id)~=Sh_M,Sh_M==circle,mmshl(W,Id)~=Sh_M_1,Sh_M_1==circle,posX_t0(W,Id)~=X_M,getMean([X_M],[-0.5116295708506283,-0.10577303415184658],Mean).
+displ(W,Id) ~ gaussian(Mean,0.01708140282920641) := shape(W,Id)~=Sh_M,Sh_M==circle,\+mmshl(W,Id)~=Sh_M_1,posX_t0(W,Id)~=X_M,getMean([X_M],[-0.03582373583180343,0.03131554066101573],Mean).
+displ(W,Id) ~ gaussian(-0.623944905927,1.00453802421) := true.
+posX_t1(W,Id) ~ gaussian(Mean,2.713026400450646e-28) := posX_t0(W,Id)~=X_M,displ(W,Id)~=X_M_1,getMean([X_M,X_M_1],[1.0000000000000013,1.0000000000000007,-1.9539925233402755e-14],Mean).
+posX_t1(W,Id) ~ gaussian(2.18108554656,1.13150235385) := true.
+posY_t1(W,Id) ~ gaussian(Mean,2.2226181183364627e-30) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.9999999999999989,2.6645352591003757e-15],Mean).
+posY_t1(W,Id) ~ gaussian(2.48055701833,1.76118833518) := true.

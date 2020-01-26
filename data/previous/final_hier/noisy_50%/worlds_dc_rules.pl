@@ -1,0 +1,14 @@
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==sphere.
+left_of_t1(W,I,I1) ~ finite([0.23236079328756695:false,0.7676392067124329:true]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I)~=Sh_M,Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([0.015129682997118156:true,0.9848703170028816:false]) := move_rel_of_t0(W,I1,I,Dir_M),Dir_M==right.
+left_of_t1(W,I,I1) ~ finite([0.25271433919880193:true,0.7472856608011981:false]) := \+move_rel_of_t0(W,I1,I,Dir_M),left_of_t0(W,I1,I)~=B_M,B_M==true.
+left_of_t1(W,I,I1) ~ finite([0.5544074230282582:true,0.4455925769717419:false]) := \+move_rel_of_t0(W,I1,I,Dir_M),left_of_t0(W,I1,I)~=B_M,B_M==false.
+left_of_t1(W,I,I1) ~ finite([0.49061032863849763:true,0.5093896713615024:false]) := true.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cube.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==sphere.
+right_of_t1(W,I,I1) ~ finite([0.22875755287009056:false,0.7712424471299089:true]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cylinder.
+right_of_t1(W,I,I1) ~ finite([0.014141414141414142:true,0.9858585858585858:false]) := move_rel_of_t0(W,I,I1,Dir_M),Dir_M==right.
+right_of_t1(W,I,I1) ~ finite([0.25306964101602775:true,0.7469303589839722:false]) := \+move_rel_of_t0(W,I,I1,Dir_M),left_of_t0(W,I,I1)~=B_M,B_M==true.
+right_of_t1(W,I,I1) ~ finite([0.446736842105263:false,0.5532631578947367:true]) := \+move_rel_of_t0(W,I,I1,Dir_M),left_of_t0(W,I,I1)~=B_M,B_M==false.
+right_of_t1(W,I,I1) ~ finite([0.5093896713615024:false,0.49061032863849763:true]) := true.

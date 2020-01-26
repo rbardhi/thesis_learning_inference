@@ -93,6 +93,9 @@ probAndSamples* dc::queryWithSamples(int n, string query, string evidence, strin
 
 		YAP_Term error;
 		string goal="query_for_structure_learning([" + evidence + "],[],"+query + "," + std::to_string(n) + ",ProbabilityQuery," + vars + "," + "StructLearnObj," + std::to_string(flag)+ ")";
+		
+		cout << goal;
+		
 		YAP_Term tmp = YAP_ReadBuffer(goal.c_str(),&error);
 		YAP_Term out;
 		double prob;

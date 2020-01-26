@@ -1,0 +1,17 @@
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := good_cube(W,I)~=B_M,B_M==true,move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left.
+left_of_t1(W,I,I1) ~ finite([0.1846742021276596:true,0.81532579787234:false]) := good_cube(W,I)~=B_M,B_M==true,\+move_rel_of_t0(W,I1,I,Dir_M),shape(W,I)~=Sh_M,Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I)~=B_M,B_M==true,\+move_rel_of_t0(W,I1,I,Dir_M),shape(W,I)~=Sh_M,Sh_M==sphere.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I)~=B_M,B_M==true,\+move_rel_of_t0(W,I1,I,Dir_M),shape(W,I)~=Sh_M,Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I)~=B_M,B_M==false,move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I)~=B_M,B_M==false,move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==sphere.
+left_of_t1(W,I,I1) ~ finite([0.04196044711951845:true,0.9580395528804813:false]) := good_cube(W,I)~=B_M,B_M==false,move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([0.49061032863849763:true,0.5093896713615024:false]) := true.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := good_cube(W,I1)~=B_M,B_M==true,move_rel_of_t0(W,I,I1,Dir_M),Dir_M==left.
+right_of_t1(W,I,I1) ~ finite([0.12289373174567512:true,0.8771062682543247:false]) := good_cube(W,I1)~=B_M,B_M==true,\+move_rel_of_t0(W,I,I1,Dir_M),shape(W,I1)~=Sh_M,Sh_M==cube,left_of_t0(W,I,I1)~=B_M_1,B_M_1==true.
+right_of_t1(W,I,I1) ~ finite([0.6205234159779615:false,0.37947658402203854:true]) := good_cube(W,I1)~=B_M,B_M==true,\+move_rel_of_t0(W,I,I1,Dir_M),shape(W,I1)~=Sh_M,Sh_M==cube,left_of_t0(W,I,I1)~=B_M_1,B_M_1==false.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I1)~=B_M,B_M==true,\+move_rel_of_t0(W,I,I1,Dir_M),shape(W,I1)~=Sh_M,Sh_M==sphere.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I1)~=B_M,B_M==true,\+move_rel_of_t0(W,I,I1,Dir_M),shape(W,I1)~=Sh_M,Sh_M==cylinder.
+right_of_t1(W,I,I1) ~ finite([0.04337265787647467:true,0.9566273421235254:false]) := good_cube(W,I1)~=B_M,B_M==false,move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cube.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I1)~=B_M,B_M==false,move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==sphere.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := good_cube(W,I1)~=B_M,B_M==false,move_rel_of_t0(W,I1,I,Dir_M),Dir_M==left,shape(W,I1)~=Sh_M,Sh_M==cylinder.
+right_of_t1(W,I,I1) ~ finite([0.5093896713615024:false,0.49061032863849763:true]) := true.

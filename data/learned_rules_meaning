@@ -1,0 +1,25 @@
+Learned:
+  displ(I)
+    shape(I)=square -> no move
+    
+    shape(I)=triangle:
+         maxModLeft = square, minModeLeft = square -> move left
+         maxModLeft = square, minModeLeft = triangle -> no move
+         maxModLeft = square, minModeLeft = circle -> move left
+         maxModLeft = triangle, minModeLeft = square -> move left
+         maxModLeft = triangle, minModeLeft = triangle -> no move
+         maxModLeft = triangle, minModeLeft = circle -> no move
+         maxModLeft = circle, minModeLeft = square -> move left
+         maxModLeft = circle, minModeLeft = triangle -> no move
+         maxModLeft = circle, minModeLeft = circle -> move left
+         \+maxModLeft = _ -> no move
+    
+    shape(I)=circle:
+         maxModLeft = square, minModeLeft = square -> move left
+         maxModLeft = square, minModeLeft = triangle -> move left
+         maxModLeft = square, minModeLeft = circle -> no move
+         maxModLeft = triangle, minModeLeft = square -> move left
+         maxModLeft = triangle, minModeLeft = triangle -> move left
+         maxModLeft = triangle, minModeLeft = circle -> move left
+         maxModLeft = circle -> move left
+         \+maxModLeft = _ -> no move

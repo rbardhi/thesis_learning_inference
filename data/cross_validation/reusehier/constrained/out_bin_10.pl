@@ -1,0 +1,9 @@
+displX(W,Id) ~ gaussian(0.0,0.0) := heavy(W,Id)~=B_M,B_M==true.
+displX(W,Id) ~ gaussian(Mean,0.05443635431004089) := heavy(W,Id)~=B_M,B_M==false,almove_left_of(W,Id)~=X_M,posX_t0(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.9898563209499438,-1.0247957926051323,-0.757373736180345],Mean).
+displX(W,Id) ~ gaussian(Mean,0.05597010030685426) := heavy(W,Id)~=B_M,B_M==false,\+almove_left_of(W,Id)~=X_M,armove_left_of(W,Id)~=X_M_1,posX_t0(W,Id)~=X_M_2,getMean([X_M_1,X_M_2],[0.9951555107695759,-1.0207715666799964,0.9108912145496078],Mean).
+displX(W,Id) ~ gaussian(0.0,0.0) := heavy(W,Id)~=B_M,B_M==false,\+almove_left_of(W,Id)~=X_M,\+armove_left_of(W,Id)~=X_M_1.
+displX(W,Id) ~ gaussian(-0.192749621006,1.02655563657) := true.
+posX_t1(W,Id) ~ gaussian(Mean,6.211111246348661e-18) := posX_t0(W,Id)~=X_M,displX(W,Id)~=X_M_1,getMean([X_M,X_M_1],[0.9999999999958252,0.9999999999565148,-3.3301361668236495e-11],Mean).
+posX_t1(W,Id) ~ gaussian(2.3754573241,1.34899102631) := true.
+posY_t1(W,Id) ~ gaussian(Mean,2.8442717664288795e-31) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.9999999999999997,8.881784197001252e-16],Mean).
+posY_t1(W,Id) ~ gaussian(2.50285062704,1.79660130616) := true.

@@ -1,0 +1,9 @@
+moveX_t0(W,I) ~ gaussian(0.607831015473,0.0989780289193) := rightmost_cube_t0(W,I_M),right_of_t0(W,I,I_M),rightmost_cylinder_t0(W,I_M_1),front_of_t0(W,I_M,I_M_1),leftmost_cylinder_t0(W,I_M_2),id(W,I),behind_of_t0(W,I_M_1,I_M),\+left_of_t0(W,I,I_M_2),shape(W,I_M_1,Sh_M),Sh_M==cylinder.
+moveX_t0(W,I) ~ gaussian(-0.52504901886,0.203078050459) := rightmost_cube_t0(W,I_M),\+right_of_t0(W,I,I_M),left_of_t0(W,I,I_M),front_of_t0(W,I_M,I),rightmost_cylinder_t0(W,I_M_1),shape(W,I,Sh_M),Sh_M==cylinder.
+moveX_t0(W,I) ~ gaussian(-0.47802229921,0.242646659355) := rightmost_cube_t0(W,I_M),\+right_of_t0(W,I,I_M),\+left_of_t0(W,I,I_M),rightmost_cylinder_t0(W,I_M_1),front_of_t0(W,I_M,I_M_1),leftmost_cylinder_t0(W,I_M_2),id(W,I),behind_of_t0(W,I_M_2,I),shape(W,I,Sh_M),Sh_M==cube.
+moveX_t0(W,I) ~ gaussian(-0.421177675327,0.30156986741) := rightmost_cube_t0(W,I_M),\+right_of_t0(W,I,I_M),\+left_of_t0(W,I,I_M),rightmost_cylinder_t0(W,I_M_1),\+front_of_t0(W,I_M,I_M_1),leftmost_cylinder_t0(W,I_M_2),id(W,I),\+behind_of_t0(W,I_M_2,I_M_1),shape(W,I,Sh_M),Sh_M==cube.
+moveX_t0(W,I) ~ gaussian(-0.0981380898578,0.459567780644) := true.
+moveY_t0(W,I) ~ gaussian(-0.729945510626,0.00192782253016) := rightmost_cube_t0(W,I_M),rightmost_cylinder_t0(W,I_M_1),front_of_t0(W,I_M_1,I_M),shape(W,I,Sh_M),Sh_M==cube.
+moveY_t0(W,I) ~ gaussian(0.452694153786,0.343243473752) := rightmost_cube_t0(W,I_M),rightmost_cylinder_t0(W,I_M_1),\+front_of_t0(W,I_M_1,I_M),right_of_t0(W,I,I_M),left_of_t0(W,I_M,I_M_1),behind_of_t0(W,I,I_M),shape(W,I,Sh_M),Sh_M==sphere.
+moveY_t0(W,I) ~ gaussian(-0.612847528674,0.169917175285) := rightmost_cube_t0(W,I_M),rightmost_cylinder_t0(W,I_M_1),\+front_of_t0(W,I_M_1,I_M),\+right_of_t0(W,I,I_M),id(W,I),leftmost_cylinder_t0(W,I_M_2),behind_of_t0(W,I_M_2,I_M),shape(W,I,Sh_M),Sh_M==cube,left_of_t0(W,I,I_M_1),\+blocked_t0(W,I,Dir_M).
+moveY_t0(W,I) ~ gaussian(-0.187508350494,0.505099330601) := true.

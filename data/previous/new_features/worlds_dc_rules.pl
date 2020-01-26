@@ -1,0 +1,9 @@
+moveX_t0(W,I) ~ gaussian(0.683087376031,0.00210308167738) := \+right_of_t0(W,I_M,I),blocked_t0(W,I,Dir_M),Dir_M==behind.
+moveX_t0(W,I) ~ gaussian(-0.0981380898578,0.459567780644) := true.
+moveY_t0(W,I) ~ gaussian(-0.378276515007,0.41702800998) := shape(W,I,Sh_M),Sh_M==cube,blocked_t0(W,I,Dir_M),Dir_M==front.
+moveY_t0(W,I) ~ gaussian(-0.218770424525,0.417691624554) := shape(W,I,Sh_M),Sh_M==cube,blocked_t0(W,I,Dir_M),Dir_M==left.
+moveY_t0(W,I) ~ gaussian(-0.75449025631,1.30510076231e-32) := shape(W,I,Sh_M),Sh_M==cube,blocked_t0(W,I,Dir_M),Dir_M==behind.
+moveY_t0(W,I) ~ gaussian(-0.75449025631,1.33531142811e-32) := shape(W,I,Sh_M),Sh_M==cube,\+blocked_t0(W,I,Dir_M).
+moveY_t0(W,I) ~ gaussian(0.472329950333,0.353841947862) := shape(W,I,Sh_M),Sh_M==sphere,blocked_t0(W,I,Dir_M),Dir_M==behind.
+moveY_t0(W,I) ~ gaussian(-0.0507392991673,0.595646965616) := shape(W,I,Sh_M),Sh_M==cylinder,blocked_t0(W,I,Dir_M),Dir_M==behind.
+moveY_t0(W,I) ~ gaussian(-0.187508350494,0.505099330601) := true.

@@ -11,7 +11,7 @@ BIGNUM = 1000000
 
 #obj = PyDC("../DCRuleLearningTestBed/program/testSampling.pl")
 
-obj = PyDC('../data/Financial.pl', '../data/FinancialDC.pl')
+'''obj = PyDC('../data/Financial.pl', '../data/FinancialDC.pl')
 #query = "findall([X,I,C,M],(intelligence(X,I),maxMod(X1, grade(X,C,X1), M)),FINDALL)."
 #a = obj.prologQuery(3, query, BIGNUM)
 
@@ -28,4 +28,19 @@ print obj.samples
 obj.terminate()
 
 #obj.execute('halt.')
-print 'hello'
+print 'hello'''
+
+
+
+BIGNUM = 1000000
+obj = PyDC('/home/dell/KU Leuven/thesis/Repositories/probabilistic-dc-learner/data/cross_validation/in_bin_det_1.pl')
+query = 'age(447,5.0)'
+query = 'findall([B],(move_left_of(W,Id,Id1,B), shape(W, Id1, Sh_M), Sh_M == circle),FINDALL).'
+response = obj.prologQuery(3,query, BIGNUM)
+
+print response
+
+#print obj.probEvidence
+#print obj.intervention
+
+obj.terminate()

@@ -3,6 +3,7 @@ Created on Aug 28, 2017
 
 @author: niteshkumar
 '''
+import sys
 import time
 import logging
 import copy
@@ -12,16 +13,21 @@ from FeatureSpace import FeatureCreator
 #from PrologInterface import PrologInterface
 from YapPrologInterface import YapPrologInterface
 from ScoreFinderProbabilistic import ScoreFinderProbabilistic
-from core.TranslateToDC import TranslateToDC
+from TranslateToDC import TranslateToDC
 
 class TreeLearnerProbabilistic(object):
+    NUM_BIN = 10
+    BIN_SIZE = 500
+    NUM_OBJ = 3
+    NUM_EXMP = (NUM_BIN - 1)*BIN_SIZE
     EPSILON_SCORE = 5
-    MIN_NUMBER_OF_DATAPOINT_AT_LEAF = 5
-    NUM_OF_LOOKAHEADS = 1
-    NUM_OF_SAMPLES = 10
-    def __init__(self, inputFile, dcFileName, whichProlog, firstFeatureName, randomVariablePredicates):
+    #MIN_NUMBER_OF_DATAPOINT_AT_LEAF = int(NUM_EXMP*NUM_OBJ/NUM_OBJ**NUM_OBJ)
+    NUM_OF_LOOKAHEADS = 3
+    NUM_OF_SAMPLES = 100
+    def __init__(self, inputFile, dcFileName, whichProlog, firstFeatureName, randomVariablePredicates, num_examples):
+        self.MIN_NUMBER_OF_DATAPOINT_AT_LEAF = num_examples
         #self.interface = PrologInterface(inputFile, whichProlog)
-        logging.basicConfig(level=logging.INFO, filename="treeLearnerLogs", filemode="w", format="%(asctime)-15s %(levelname)-8s %(message)s")
+        logging.basicConfig(level=logging.DEBUG, filename="treeLearnerLogs", filemode="w", format="%(asctime)-15s %(levelname)-8s %(message)s")
         self.interface = YapPrologInterface(randomVariablePredicates)
         if dcFileName == '':
             self.runProbMode = False
@@ -33,6 +39,7 @@ class TreeLearnerProbabilistic(object):
         self.language = TypesModesAggregationLanguage(self.interface)
         self.scoreFinder = ScoreFinderProbabilistic()
         self.rules = []
+        self.rulesFragmented = []
         self.featureList = []
         self.featureListCopy = []
         self.targetType = ''
@@ -396,28 +403,28 @@ class TreeLearnerProbabilistic(object):
                 idx += 1
         featureAndScore = None
         
-        logging.debug('Target feature:')
-        logging.debug(self.targetPredicateString)
-        logging.debug('Current String of features:')
-        logging.debug(currentStringOfFeatures)
-        logging.debug('Score Difference:')
-        logging.debug(score - currentScore)
-        logging.debug('Scores:')
-        logging.debug(actualScores)
-        logging.debug('Actual features:')
-        logging.debug(actualFeatures)
-        logging.debug('Current Score:')
-        logging.debug(currentScore)
-        logging.debug('Score:')
-        logging.debug(score)
-        logging.debug('FeatureId:')
-        logging.debug(featureId)
-        logging.debug('Selected Feature:')
+        logging.info('Target feature:')
+        logging.info(self.targetPredicateString)
+        logging.info('Current String of features:')
+        logging.info(currentStringOfFeatures)
+        logging.info('Score Difference:')
+        logging.info(score - currentScore)
+        logging.info('Scores:')
+        logging.info(actualScores)
+        logging.info('Actual features:')
+        logging.info(actualFeatures)
+        logging.info('Current Score:')
+        logging.info(currentScore)
+        logging.info('Score:')
+        logging.info(score)
+        logging.info('FeatureId:')
+        logging.info(featureId)
+        logging.info('Selected Feature:')
         if featureId == -1:
-            logging.debug('actualFeatures cannot be found because featureId is -1')
+            logging.info('actualFeatures cannot be found because featureId is -1')
         else:
-            logging.debug(actualFeatures[featureId])
-        logging.debug('\n\n')
+            logging.info(actualFeatures[featureId])
+        logging.info('\n\n')
         
         ## This is patch ... Rewrite it correctly.
         if(not (self.firstFeatureRestrictName == '') and self.isFirst):
@@ -441,7 +448,7 @@ class TreeLearnerProbabilistic(object):
             pass
         return featureAndScore
         
-    def growTree(self, validFeatureFlag, currentScore, currentNumberOfDataPoint, currentStringOfFeatures, isRecentRelational, previousFeatureList, currentListOfContinuousVaribales):
+    def growTree(self, validFeatureFlag, currentScore, currentNumberOfDataPoint, currentStringOfFeatures, currentListOfFeatures, isRecentRelational, previousFeatureList, currentListOfContinuousVaribales):
         featureAndScore = self.findBestFeature(validFeatureFlag, currentScore, currentNumberOfDataPoint, currentStringOfFeatures, isRecentRelational, previousFeatureList, currentListOfContinuousVaribales)
         if featureAndScore == None:
             variables = [self.targetVariable]
@@ -512,6 +519,9 @@ class TreeLearnerProbabilistic(object):
             scoreAndDistribution = self.scoreFinder.getScore(bigX, bigY, self.targetType, xVar, bigP, numOfExamples, self.NUM_OF_SAMPLES)
             distribution = scoreAndDistribution['distribution']
             self.rules.append(self.toStringOfRules(self.targetPredicateString, currentStringOfFeatures, distribution))
+            ruleFragment = {}
+            ruleFragment[self.targetPredicateString] = currentListOfFeatures
+            self.rulesFragmented.append(ruleFragment)
         else:
             featureId = featureAndScore['featureId']
             scores = featureAndScore['scores']
@@ -545,14 +555,17 @@ class TreeLearnerProbabilistic(object):
                     pass
                 else:
                     newFeature = ''
+                    newFeatureList = []
                     if currentStringOfFeatures == '':
                         newFeature = feat
+                        newFeatureList = [feat]
                     else:
                         newFeature = currentStringOfFeatures + ', ' + feat
+                        newFeatureList = currentListOfFeatures + [feat]
                     sc = float('-inf')
                     if numOfDataPointsForCal[idx] > 0:
                         sc = scores[idx] #TODO Removed division by number of points
-                    self.growTree(copy.copy(validFeatureFlag), sc, numOfDataPoints[idx], newFeature, isRecentRelational, previousFeatureListCopy, currentListOfContinuousVaribalesCopy)
+                    self.growTree(copy.copy(validFeatureFlag), sc, numOfDataPoints[idx], newFeature, newFeatureList, isRecentRelational, previousFeatureListCopy, currentListOfContinuousVaribalesCopy)
                 idx += 1
     
 
@@ -603,11 +616,55 @@ class TreeLearnerProbabilistic(object):
         sc = float('-inf')
         if len(bigY) > 0:
             sc = scoreAndDistribution['score'] # TODO: Check
-        self.growTree(copy.copy(validFeatureFlag), sc, numOfExamples, '', False, [], [])
+        self.growTree(copy.copy(validFeatureFlag), sc, numOfExamples, '', [], False, [], [])
         if not self.defaultRuleAddedForCurrentTarget:
             distribution = scoreAndDistribution['distribution']
             self.rules.append(self.toStringOfRules(self.targetPredicateString, '', distribution))
-
+            ruleFragment = {}
+            ruleFragment[self.targetPredicateString] = []
+            self.rulesFragmented.append(ruleFragment)
+    
+    def generateDependencyStructureOfRules(self, listOfDictOfRules):
+        predicateNames = self.language.dictOfPredicates.keys()
+        dependency = {}
+        for rule in listOfDictOfRules:
+            ruleHead = rule.keys()[0]
+            ruleHeadName = ''
+            for pName in predicateNames:
+                ppName = pName+'('
+                if ppName in ruleHead:
+                    if dependency.has_key(pName):
+                        pass
+                    else:
+                        dependency[pName] = set()
+                    ruleHeadName = pName
+                    break
+            
+            for atom in rule[ruleHead]:
+                tempSet = ()
+                for pName in predicateNames:
+                    ppName = pName+'('
+                    if ppName in atom:
+                        tempSet += (pName,)
+                dependency[ruleHeadName].add(tempSet)
+        dependencyStructure = {}
+        for target in dependency.keys():
+            dependencyStructure[target] = []
+            for atom in dependency[target]:
+                if atom == ():
+                    pass
+                else:
+                    tempList = []
+                    for eachAtom in atom:
+                        tempList.append(eachAtom)
+                    dependencyStructure[target].append(tempList)
+        return dependencyStructure
+    
+    def generateBasePredicates(self):
+        basePredicates = {}
+        for key in self.language.dictOfPredicates.keys():
+            basePredicates[key] = self.language.dictOfPredicates[key].getBasePredicate()
+        return basePredicates
 
     def learnRules(self):
         targets = self.language.target
@@ -658,23 +715,83 @@ class TreeLearnerProbabilistic(object):
             sc = float('-inf')
             if len(bigY) > 0:
                 sc = scoreAndDistribution['score'] # TODO: Check
-            self.growTree(copy.copy(validFeatureFlag), sc, numOfExamples, '', False, [], [])
+            self.growTree(copy.copy(validFeatureFlag), sc, numOfExamples, '', [], False, [], [])
             if not self.defaultRuleAddedForCurrentTarget:
                 distribution = scoreAndDistribution['distribution']
                 self.rules.append(self.toStringOfRules(self.targetPredicateString, '', distribution))
+                ruleFragment = {}
+                ruleFragment[self.targetPredicateString] = []
+                self.rulesFragmented.append(ruleFragment)
+        #self.interface.terminate()
+        #del self.interface
+  
+def learn_rules_det(in_name, out_name,scen,num_exmp,first_feat):
+  dir_name = '../data/cross_validation/'
+  #dir_name = ''
+  RND_VARIABLE = ['posX_t0', 'posX_t1', 'posY_t0', 'posY_t1', 'shape', 'heavy', 'move_left_of', 'move_north_of', 'almove_left_of', 'armove_left_of', 'displX', 'displY', 'left_of', 'north_of', 'l_o_shape', 'l_o_posX_t0', 'atleastOne', 'latleastOne', 'ratleastOne', 'mmshl', 'mmshr', 'avglshpos', 'avgrshpos', 'all_combined', 'atleastOneLeft', 'atleastOneNorth', 'atleastOneRight', 'atleastOneSouth', 'blocked_left', 'blocked_right', 'blocked_north', 'blocked_south', 'mlo', 'mno', 'mro', 'mso', 'case']
+  f = open(dir_name+scen + out_name, 'w')
+  obj = TreeLearnerProbabilistic(dir_name+scen + in_name, '', 'SWI-prolog', first_feat, RND_VARIABLE, int(num_exmp))
+  obj.learnRules()
+  obj1 = TranslateToDC()
+  obj1.setRandomVariablePredicates(RND_VARIABLE)
+  for rule in obj.rules:
+    f.write(obj1.translate(rule) + '\n')
+  f.close()
+def learn_rules_noisy(in_name_det, in_name_noisy, out_name,scen, num_exmp,first_feat):
+  dir_name = '../data/cross_validation/'
+  #dir_name = ''
+  RND_VARIABLE = ['posX_t0', 'posX_t1', 'posY_t0', 'posY_t1', 'shape', 'heavy', 'move_left_of', 'move_north_of', 'almove_left_of', 'armove_left_of', 'displX', 'displY', 'left_of', 'north_of', 'l_o_shape', 'l_o_posX_t0', 'atleastOne', 'latleastOne', 'ratleastOne', 'mmshl', 'mmshr', 'avglshpos', 'avgrshpos', 'all_combined', 'atleastOneLeft', 'atleastOneNorth', 'atleastOneRight', 'atleastOneSouth', 'blocked_left', 'blocked_right', 'blocked_north', 'blocked_south', 'mlo', 'mno', 'mro', 'mso', 'case'] 
+  f = open(dir_name+scen + out_name, 'w')
+  obj = TreeLearnerProbabilistic(dir_name+scen + in_name_det, dir_name+scen + in_name_noisy, 'SWI-prolog', first_feat, RND_VARIABLE, int(num_exmp))
+  obj.learnRules()
+  obj1 = TranslateToDC()
+  obj1.setRandomVariablePredicates(RND_VARIABLE)
+  for rule in obj.rules:
+    f.write(obj1.translate(rule) + '\n')
+  f.close()
 
 if __name__ == '__main__':
-    outputFile = '../data/MyDCRules.pl'
-    randomVariableNames = ['hasLoan', 'clientDistrict', 'hasAccount', 'clientLoan', 'loanAmount', 'loanStatus','monthlyPayments', 'gender', 'age', 'freq', 'avgSalary', 'ratUrbInhab', 'avgNrWith', 'avgSumOfInc', 'avgSumOfW', 'stdMonthInc', 'stdMonthW']
-    f = open(outputFile, 'w')
-    obj = TreeLearnerProbabilistic('../data/Financial.pl', '', 'SWI-prolog', '', randomVariableNames)
+  if sys.argv[1] == 'false':
+    learn_rules_det(sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5],sys.argv[6])
+  elif sys.argv[1] == 'true':
+    learn_rules_noisy(sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5],sys.argv[6],sys.argv[7])
+  #learn_rules_det('../data/dc_input.pl','../data/dc_output.pl')
+  
+'''
+1D: forula
+  Flat:  
+    simple: 'atleastOne'
+    constrained: ''
+  Hier:
+    simple: ''
+    constrained: ''
+2D:
+  Flat: 10
+    simple: 'shape' yes
+    constrained: heavy?
+  Hier: 
+    simple: ''
+    constrained: heavy?
+'''  
+  
+'''        
+if __name__ == '__main__':
+    directory = 'final_hier'
+    outputFile = '../data/'+directory+'/worlds_dc_rules.pl'
+    inputFile = '../data/' + directory +'/worlds_facts.pl'
+    #inputFileDC =  '../data/' + directory +'/worlds_facts_noisy.pl'
+    f = open('../data/dc_output.pl', 'w')
+    obj = TreeLearnerProbabilistic('../data/z_nitesh_example/Financial.pl', '../data/z_nitesh_example/FinancialDC.pl', 'SWI-prolog', '', ['hasLoan', 'clientDistrict', 'hasAccount', 'clientLoan', 'loanAmount', 'loanStatus','monthlyPayments', 'gender', 'age', 'freq', 'avgSalary', 'ratUrbInhab', 'avgNrWith', 'avgSumOfInc', 'avgSumOfW', 'stdMonthInc', 'stdMonthW'])
+    
+    RND_VARIABLE = ['posX_t0', 'posX_t1', 'posY_t0', 'posY_t1', 'shape', 'move_left_of','displ']'good_cube', 'good_sphere', 'left_of_t0', 'left_of_t1', 'right_of_t0', 'right_of_t1', 'shape'], 'posX_l_t1', 'posX_r_t1', 'posY_l_t1', 'posY_r_t1']
+    obj = TreeLearnerProbabilistic('../data/dc_input.pl', '', 'SWI-prolog', '', RND_VARIABLE)
     obj.learnRules()
     obj1 = TranslateToDC()
-    obj1.setRandomVariablePredicates(randomVariableNames)
+    obj1.setRandomVariablePredicates(RND_VARIABLE)
     for rule in obj.rules:
         rule = obj1.translate(rule)
         f.write(rule + '\n')
-    f.close()
+    f.close()'''
 
 
     

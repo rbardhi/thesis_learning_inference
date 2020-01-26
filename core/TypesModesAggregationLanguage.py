@@ -44,6 +44,7 @@ class TypesModesAggregationLanguage(object):
                     query += variables[idx] + ', '
                     idx += 1
             query += ').'
+            print query
             results = list(self.prologInterface.simpleQuery(query))
             for m in results:
                 idx = 0

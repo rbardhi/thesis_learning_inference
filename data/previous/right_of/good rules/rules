@@ -1,0 +1,6 @@
+posX_t1(W,I) ~ gaussian(Mean,0.14752988523652094) := posX_t0(W,I)~=X_M,shape(W,I,Sh_M),Sh_M==cube,\+right_of_t0(W,I_M,I),getMean([X_M],[0.9856810905883804,0.5731082642289242],Mean).
+posX_t1(W,I) ~ gaussian(Mean,1.0305406569883479e-30) := posX_t0(W,I)~=X_M,shape(W,I,Sh_M),Sh_M==sphere,getMean([X_M],[1.0000000000000004,-4.440892098500626e-16],Mean).
+posX_t1(W,I) ~ gaussian(0.628655316258,5.88650059689) := true.
+posY_t1(W,I) ~ gaussian(Mean,0.020514315767455122) := posY_t0(W,I)~=X_M,shape(W,I,Sh_M),Sh_M==cube,\+right_of_t0(W,I_M,I),getMean([X_M],[1.015588060270686,0.6727937509951436],Mean).
+posY_t1(W,I) ~ gaussian(Mean,1.27383452147098e-31) := posY_t0(W,I)~=X_M,shape(W,I,Sh_M),Sh_M==sphere,getMean([X_M],[1.0000000000000002,-4.440892098500626e-16],Mean).
+posY_t1(W,I) ~ gaussian(1.87823605449,6.35638106974) := true.

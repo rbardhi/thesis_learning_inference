@@ -1,0 +1,10 @@
+left_of_t1(W,I,I1) ~ finite([1.0:false]) := shape(W,I,Sh_M),Sh_M==cube.
+left_of_t1(W,I,I1) ~ finite([1.0:true]) := shape(W,I,Sh_M),Sh_M==cylinder.
+left_of_t1(W,I,I1) ~ finite([0.5:true,0.5:false]) := true.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := shape(W,I,Sh_M),Sh_M==sphere,right_of_t0(W,I,I1)~=B_M,B_M==true,move_rel_of_t0(W,I,I1,Dir_M),Dir_M==right.
+right_of_t1(W,I,I1) ~ finite([0.09090909090909091:false,0.9090909090909091:true]) := shape(W,I,Sh_M),Sh_M==sphere,right_of_t0(W,I,I1)~=B_M,B_M==true,\+move_rel_of_t0(W,I,I1,Dir_M).
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := shape(W,I,Sh_M),Sh_M==sphere,right_of_t0(W,I,I1)~=B_M,B_M==false.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := shape(W,I,Sh_M),Sh_M==cylinder,right_of_t0(W,I,I1)~=B_M,B_M==true.
+right_of_t1(W,I,I1) ~ finite([1.0:true]) := shape(W,I,Sh_M),Sh_M==cylinder,right_of_t0(W,I,I1)~=B_M,B_M==false,move_rel_of_t0(W,I1,I,Dir_M),Dir_M==right.
+right_of_t1(W,I,I1) ~ finite([1.0:false]) := shape(W,I,Sh_M),Sh_M==cylinder,right_of_t0(W,I,I1)~=B_M,B_M==false,\+move_rel_of_t0(W,I1,I,Dir_M).
+right_of_t1(W,I,I1) ~ finite([0.4859154929577465:true,0.5140845070422535:false]) := true.

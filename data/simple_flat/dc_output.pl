@@ -1,0 +1,10 @@
+displ(W,Id) ~ gaussian(-0.0139445683719,0.0104603190877) := shape(W,Id)~=Sh_M,Sh_M==square.
+displ(W,Id) ~ gaussian(-0.410215534438,0.162361955494) := shape(W,Id)~=Sh_M,Sh_M==triangle,findall_forward(Sh_M_1,(left_of(W,Id,Id_M,true),shape(W,Id_M)~=Sh_M_1),X_T_21),maxMod(X_T_21)~=square.
+displ(W,Id) ~ gaussian(0.0,0.0) := shape(W,Id)~=Sh_M,Sh_M==triangle,findall_forward(Sh_M_1,(left_of(W,Id,Id_M,true),shape(W,Id_M)~=Sh_M_1),X_T_24),\+maxMod(X_T_24)~=_.
+displ(W,Id) ~ gaussian(-0.446869682478,0.145015680983) := shape(W,Id)~=Sh_M,Sh_M==circle,findall_forward(Sh_M_1,(left_of(W,Id,Id_M,true),shape(W,Id_M)~=Sh_M_1),X_T_29),maxMod(X_T_29)~=square.
+displ(W,Id) ~ gaussian(-0.626462057334,0.0855827519965) := shape(W,Id)~=Sh_M,Sh_M==circle,findall_forward(Sh_M_1,(left_of(W,Id,Id_M,true),shape(W,Id_M)~=Sh_M_1),X_T_30),maxMod(X_T_30)~=triangle.
+displ(W,Id) ~ gaussian(-0.232844796973,0.126204023314) := true.
+posX_t1(W,Id) ~ gaussian(Mean,6.898454857388868e-30) := posX_t0(W,Id)~=X_M,displ(W,Id)~=X_M_1,getMean([X_M,X_M_1],[1.0000000000000004,0.9999999999999999,-1.9984014443252818e-15],Mean).
+posX_t1(W,Id) ~ gaussian(1.88926384049,1.13375781649) := true.
+posY_t1(W,Id) ~ gaussian(Mean,7.859223949346725e-31) := posY_t0(W,Id)~=X_M,getMean([X_M],[0.9999999999999993,1.7763568394002505e-15],Mean).
+posY_t1(W,Id) ~ gaussian(2.46787968233,1.74570387028) := true.

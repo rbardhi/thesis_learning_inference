@@ -57,6 +57,7 @@ class YapPrologInterface(object):
         return self.yapObject.sample(numOfSamples, query, evidence, variable, BIGNUM)
     
     def prologQuery(self, query):
+        #print query
         st = self.yapObject.prologQuery(VARIABLE_NUMBER, query, BIGNUM)
         return st
     
@@ -72,6 +73,8 @@ class YapPrologInterface(object):
         listOfVars = re.findall('\((.*)\)', query)[0]
         listOfVars = listOfVars.split(',')
         result = self.listQuery(query, listOfVars)
+        #print '####'
+        #print result
         keys = result.keys()
         akey = keys[0]
         avalue = result[akey]
@@ -97,6 +100,7 @@ class YapPrologInterface(object):
         if query[-1] == '.':
             query = query[:-1]
         query = 'findall(' + stringOfVars + ',' + '(' + query + '),FINDALL).'
+        #print query
         response = self.prologQuery(query)
         response = self.convertStringReprOfListToList(response)
         for ele in response:
@@ -192,7 +196,7 @@ class YapPrologInterface(object):
             p = self.query(self.numOfSamples, "(" + dcQuery + ")", "")
             s = str(p) + ' ' + dcQuery
             self.yapPrologInterface_logger.debug(s)
-            prob.append(p)   
+            prob.append(p)  
         return prob
     
     def getSamplesAndProbabilityOfQuery(self, query, body, listOfSubstitutionVars, listOfContinuousVars):
@@ -255,6 +259,7 @@ class YapPrologInterface(object):
             query = query.replace(keyStr, valStr)
             keyStr = ',' + key + ','
             valStr = ',' + str(subs[key]) + ','
+            query = query.replace(keyStr, valStr)
             query = query.replace(keyStr, valStr)
             keyStr = '(' + key + ','
             valStr = '(' + str(subs[key]) + ','
